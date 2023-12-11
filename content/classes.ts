@@ -1,4 +1,5 @@
 import type { Enclosure } from "feed/lib/typings";
+import { v4 as uuidv4 } from "uuid";
 
 type Image = {
   link: string;
@@ -11,13 +12,13 @@ type ContentInputData = {
 };
 
 export class Content {
-  id: `${string}-${string}-${string}-${string}-${string}`;
+  id: string;
   updated: Date;
   created: Date;
   inFeed: boolean = true;
 
   constructor(data: ContentInputData) {
-    this.id = crypto.randomUUID();
+    this.id = uuidv4();
     this.created = data.created;
     this.updated = data.updated ? data.updated : data.created;
   }
