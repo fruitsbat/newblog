@@ -68,11 +68,11 @@ export class Game extends Content {
 }
 
 export class Music extends FeedItem {
-  coverImage: Image;
+  coverImage?: Image;
   audioFile: string;
 
   constructor(
-    data: { audioFile: string; coverImage: Image } & FeedItemInputData
+    data: { audioFile: string; coverImage?: Image } & FeedItemInputData
   ) {
     super(data);
     this.audioFile = data.audioFile;

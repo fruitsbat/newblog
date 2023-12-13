@@ -1,6 +1,6 @@
 <template>
     <div class="rounded-3xl bg-base-200 flex gap-4 flex-col justify-between join join-vertical h-full">
-        <img :src="music.coverImage.link" :alt="music.coverImage.description" class="join-item" />
+        <img v-if="music.coverImage" :src="music.coverImage.link" :alt="music.coverImage.description" class="join-item" />
         <h2 class="join-item flex items-center">
             <span class="font-bold text-xl p-4">{{ music.title }}</span>
         </h2>
