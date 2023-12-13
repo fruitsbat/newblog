@@ -3,8 +3,8 @@ export const contentList: Array<Content> = [
   new Page({
     created: new Date(11, 12, 2023),
     link: "/rsa",
-    summary: "the math behind rsa explained",
-    title: "the math behind rsa explained",
+    summary: "shows how rsa works",
+    title: "rsa calculator",
     image: {
       description: "a stock photo of a lock",
       link: "/image/lock.webp"

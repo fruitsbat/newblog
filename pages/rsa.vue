@@ -2,66 +2,70 @@
     <div class="prose p-8">
         <HomeButton />
         <h1>rsa</h1>
-        <h2>semi primes</h2>
-        <p>
-            a factor is a number that you can divide another number by.
-            for example the factors of 6 are 2 and 3.
-            6 is also a semi prime number since all of it's factors are prime numbers.
-
-            you will always get a semi prime number when you multiply two prime numbers.
-        </p>
-
         <h2>generate keys</h2>
         <div class="flex gap-4">
             <div class="flex flex-col gap-2">
                 <span class="font-bold">p=</span>
                 <select class="select" v-model="p">
                     <option v-for="num in smallPrimes" :value="num">
-                        {{  num }}
+                        {{ num }}
                     </option>
                 </select>
                 <span class="bg-warning p-2 text-warning-content rounded-lg" v-if="!isPrime(p)">{{ p }} is not prime</span>
-                <button class="btn" @click="p = randomSmallPrime()">
-                    <ArrowPathIcon class="w-6 h-6" />
-                    <span>reroll</span>
-                </button>
             </div>
             <div class="flex flex-col gap-2">
                 <span class="font-bold">q=</span>
                 <select class="select" v-model="q">
                     <option v-for="num in smallPrimes" :value="num">
-                        {{  num }}
+                        {{ num }}
                     </option>
                 </select>
                 <span class="bg-warning p-2 text-warning-content rounded-lg" v-if="!isPrime(q)">{{ q }} is not prime</span>
-                <button class="btn" @click="q = randomSmallPrime()">
-                    <ArrowPathIcon class="w-6 h-6" />
-                    <span>reroll</span>
-                </button>
             </div>
         </div>
         <span v-if="q === p">p and q should not be the same</span>
         <p>
             next we will need to calculate their product n = p * q = {{ p }} * {{ q }} = {{ n }}
-            and the Euler totient φ(n) = {{ phi }}
+            and the Euler totient φ({{ n }}) = {{ phi }}
         </p>
         <h3>public key</h3>
         <p>
             the public key must fulfill a few conditions
         <ul>
             <li>must be prime</li>
-            <li>must be smaller φ(n)</li>
-            <li>must not be a factor φ(n)</li>
+            <li>must be smaller than φ(n) = {{ phi }}</li>
+            <li>must not be a factor φ(n) = {{ phi }}</li>
         </ul>
-        a number where this is true is: {{ chosenPublicKey }}
+        a number where this is true is:
+        <select class="select" v-model="publicKeyIndex">
+            <option v-for="key, index in validPublicKeys" :value="index">{{ key }}</option>
+        </select>.
+        we will use it in our public key: {{ `(${chosenPublicKey}, ${n})` }}.
+        </p>
+        <h3>private key</h3>
+        <p>
+            The private key will need to be the multiplicative modular inverse of our public key and φ(n).
+            We can use the extended euclidean algorithm for this.
+        <ol>
+            <li v-for="step in euclidStepOne">
+                {{ step.solution }} = {{ step.factor }} * {{ step.value }} + {{ step.added }}
+            </li>
+        </ol>
+        <ol>
+            <li v-for="step in extendedEuclideanAlgorithm">
+                {{ `q=${step.q} r=${step.r} s=${step.s} t=${step.t}` }}
+            </li>
+        </ol>
+        if our candidate is below zero we have to add our φ(n), the modulus, to it until it is positive.
+        {{ phi }} * {{ privateKey.belowZeroCount }} + {{ extendedEuclideanAlgorithm.at(-1)?.oldT }} = {{ privateKey.key }}
+        this means that we can use {{ `(${privateKey.key}, ${n})` }} as a private key.
         </p>
     </div>
 </template>
 
 <script setup lang="ts">
-import { ArrowPathIcon } from '@heroicons/vue/24/solid';
 useHead({
-    title: "the math behind rsa"
+    title: "rsa calculator",
 })
 
 function isPrime(num: number): boolean {
@@ -72,20 +76,15 @@ function isPrime(num: number): boolean {
 }
 
 function findPrimesBelow(num: number): Array<number> {
-    return Array.from(Array(num).keys()).filter((n) => {return isPrime(n)})
+    return Array.from(Array(num).keys()).filter((n) => { return isPrime(n) })
 }
 
-const smallPrimes = findPrimesBelow(100).filter((num) => {return num > 3})
-const primes = findPrimesBelow(8633)
-
-function randomSmallPrime(): number {
-    const randomNumber = Math.round(Math.random() * smallPrimes.length)
-    return smallPrimes.filter((item) => {return item !== p.value && item !== q.value})[randomNumber % smallPrimes.length]
-}
+const smallPrimes = findPrimesBelow(100).filter((num) => { return num > 3 })
+const primes = findPrimesBelow(8634)
 
 const p = ref(13)
 const q = ref(43)
-const publicKeyIndex = ref(50)
+const publicKeyIndex = ref(0)
 
 const n = computed(() => {
     return p.value * q.value
@@ -96,10 +95,76 @@ const phi = computed(() => {
 })
 
 const validPublicKeys = computed(() => {
-    return primes.filter((num) => {return num < phi.value}).filter((key) => {return phi.value % key !== 0})
+    return primes.filter((num) => { return num < phi.value }).filter((key) => { return phi.value % key !== 0 })
 })
 
 const chosenPublicKey = computed(() => {
     return validPublicKeys.value[publicKeyIndex.value % validPublicKeys.value.length]
+})
+
+type EuclidStep = { solution: number, factor: number, value: number, added: number }
+const euclidStepOne = computed(() => {
+    const step1 = {
+        solution: phi.value,
+        factor: Math.floor(phi.value / chosenPublicKey.value),
+        value: chosenPublicKey.value,
+        added: phi.value - (Math.floor(phi.value / chosenPublicKey.value) * chosenPublicKey.value)
+    } as EuclidStep
+    let steps: Array<EuclidStep> = [step1]
+    while (steps.at(-1)?.added !== 0) {
+        const newSolution = steps.at(-1)!.value
+        const newValue = steps.at(-1)!.added
+        const newFactor = Math.floor(newSolution / newValue)
+        const newAdded = newSolution - (newValue * newFactor)
+        steps.push(
+            {
+                solution: newSolution,
+                factor: newFactor,
+                value: newValue,
+                added: newAdded,
+            }
+        )
+    }
+    return steps
+})
+
+type extendedEuclideanAlgorithmResults = {
+    r: number,
+    s: number,
+    t: number,
+    oldR: number,
+    oldS: number,
+    oldT: number,
+    q: number,
+}
+const extendedEuclideanAlgorithm = computed(() => {
+    let list: Array<extendedEuclideanAlgorithmResults> = []
+    let a = chosenPublicKey.value
+    let b = phi.value
+
+    if (a < b) [a, b] = [b, a];
+    let s = 0, oldS = 1;
+    let t = 1, oldT = 0;
+    let r = b, oldR = a;
+    list.push({ r, s, t, oldR, oldS, oldT, q: Math.floor(oldR / r) })
+    while (r != 0) {
+        let q = Math.floor(oldR / r);
+        [r, oldR] = [oldR - q * r, r];
+        [s, oldS] = [oldS - q * s, s];
+        [t, oldT] = [oldT - q * t, t];
+        list.push({ r, s, t, oldR, oldS, oldT, q })
+    }
+    return list
+})
+
+const privateKey = computed(() => {
+    const last = extendedEuclideanAlgorithm.value.at(-1)!
+    let iterations = 0
+    let key = last.oldT
+    while (key < 0) {
+        iterations++
+        key += phi.value
+    }
+    return { key: key % phi.value, belowZeroCount: iterations }
 })
 </script>

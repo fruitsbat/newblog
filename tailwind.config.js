@@ -18,6 +18,7 @@ export default {
       syncopate: ["Syncopate"],
       pattaya: ["Pattaya"],
       gasoekone: ["GasoekOne"],
+      glitch: ["Glitch"],
     },
     extend: {
       backgroundImage: {

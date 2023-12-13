@@ -50,3 +50,8 @@
   font-family: "GasoekOne";
   src: url("/font/gasoekone-regular-webfont.woff2");
 }
+
+@font-face {
+  font-family: "Glitch";
+  src: url("/font/RubikGlitch-Regular.woff2");
+}
