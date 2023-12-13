@@ -5,6 +5,7 @@ export enum Theme {
   Sleepy = "sleepy",
   PostIt = "post-it",
   Magic = "magic",
+  Minty = "minty",
 }
 
 export const useThemeStore = defineStore("theme", {

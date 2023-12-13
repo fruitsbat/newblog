@@ -20,6 +20,7 @@ const pickableThemes: Array<Theme> = [
     Theme.Sleepy,
     Theme.PostIt,
     Theme.Magic,
+    Theme.Minty,
 ]
 
 const { $state } = useThemeStore()

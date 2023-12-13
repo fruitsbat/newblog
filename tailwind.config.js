@@ -66,6 +66,16 @@ export default {
           neutral: "#162841",
         },
       },
+      {
+        minty: {
+          "base-100": "#e2f9ec",
+          "base-200": "#f0fff6",
+          primary: "#3ed37c",
+          secondary: "#86eab0",
+          accent: "#4de98e",
+          neutral: "#0a1d12"
+        },
+      },
     ],
   },
 };
