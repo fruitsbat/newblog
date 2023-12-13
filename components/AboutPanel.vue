@@ -9,7 +9,7 @@
                     <span class="text-lg font-syncopate">web<br>ring</span>
                 </h2>
             </NuxtLink>
-            <NuxtLink class="btn-ghost text-neutral h-full min-h-[120px] p-4 rounded-3xl btn group" to="/index.xml">
+            <NuxtLink class="btn-neutral h-full min-h-[120px] p-4 rounded-3xl btn group" to="/index.xml">
                 <h2 class="flex gap-4 items-center">
                     <span class="text-6xl font-glitch">feed</span>
                 </h2>
