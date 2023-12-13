@@ -4,7 +4,7 @@
             <SparklesIcon class="w-12 h-12" />
             <span class="font-macondo text-6xl">theme</span>
         </h2>
-        <ThemeDisplay v-for="theme in pickableThemes" :theme-name="(theme as String)" />
+        <ThemeDisplay v-for="theme in pickableThemes" :theme-name="theme" />
         <button class="btn" @click="$state.active = ''">
             <TrashIcon class="w-6 h-6" />
             <span>reset</span>
@@ -16,8 +16,8 @@
 import { useThemeStore } from "../stores/theme"
 import ThemeDisplay from "./ThemeDisplay.vue";
 import { TrashIcon, SparklesIcon } from "@heroicons/vue/24/solid"
-const pickableThemes: Array<String> = [
-    "sleepy" as String, "post-it" as String, "magic" as String, "minty" as String
+const pickableThemes: Array<string> = [
+    "sleepy", "post-it", "magic", "minty"
 ]
 
 const { $state } = useThemeStore()
