@@ -3,17 +3,18 @@
         <div class="grid w-full h-full gap-4 @lg:grid-cols-2">
             <ThemeSwitcher class="@md:row-span-2" />
             <ContactDetails class="text-primary-content" />
-            <NuxtLink class="btn-secondary h-full min-h-[120px] p-4 rounded-3xl btn group @lg:row-span-2" to="https://ring.bicompact.space/">
+            <NuxtLink class="btn-secondary h-full min-h-[120px] p-4 rounded-3xl btn group @lg:row-span-2"
+                to="https://ring.bicompact.space/">
                 <h2 class="flex gap-4 font-syncopate items-center text-secondary-content">
                     <GlobeAltIcon class="w-12 h-12 group-hover:animate-spin" />
                     <span class="text-lg font-syncopate">web<br>ring</span>
                 </h2>
             </NuxtLink>
-            <NuxtLink class="btn-neutral h-full min-h-[120px] p-4 rounded-3xl btn group" to="/index.xml">
+            <a class="btn-neutral h-full min-h-[120px] p-4 rounded-3xl btn group" href="/index.xml">
                 <h2 class="flex gap-4 items-center">
                     <span class="text-6xl font-glitch">feed</span>
                 </h2>
-            </NuxtLink>
+            </a>
         </div>
     </div>
 </template>
