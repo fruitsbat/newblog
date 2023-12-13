@@ -11,11 +11,6 @@
 <script setup lang="ts">
 import { useThemeStore } from "./stores/theme"
 const store = useThemeStore()
-onMounted(() => {
-  const oldTheme = store.$state.active
-  store.$state.active = ""
-  store.$state.active = oldTheme
-})
 </script>
 
 <style>
