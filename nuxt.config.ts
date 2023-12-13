@@ -9,9 +9,6 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  piniaPersistedstate: {
-    storage: "localStorage",
-  },
   nitro: {
     prerender: {
       routes: ["/index.xml"],
