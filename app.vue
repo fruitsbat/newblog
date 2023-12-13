@@ -11,6 +11,11 @@
 <script setup lang="ts">
 import { useThemeStore } from "./stores/theme"
 const { $state } = useThemeStore()
+
+onMounted(() => {
+  $state.active = $state.active
+  console.log(`theme: ${$state.active}`)
+})
 </script>
 
 <style>
