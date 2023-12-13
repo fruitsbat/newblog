@@ -25,10 +25,9 @@
 
 <script setup lang="ts">
 import { CheckCircleIcon } from "@heroicons/vue/24/outline";
-import type { PropType } from "vue";
 defineProps({
     themeName: {
-        type: Object as PropType<string>,
+        type: String,
         required: true,
     }
 })
