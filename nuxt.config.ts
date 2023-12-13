@@ -11,7 +11,8 @@ export default defineNuxtConfig({
   },
   piniaPersistedstate: {
     cookieOptions: {
-      sameSite: "lax",
+      sameSite: "strict",
+      expires: new Date(new Date().getFullYear() + 2, 1, 1),
     },
     storage: "cookies",
   },
