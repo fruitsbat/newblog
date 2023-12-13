@@ -9,6 +9,12 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  piniaPersistedstate: {
+    cookieOptions: {
+      sameSite: "strict",
+    },
+    storage: "cookies",
+  },
   nitro: {
     prerender: {
       routes: ["/index.xml"],
