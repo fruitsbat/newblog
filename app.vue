@@ -1,7 +1,7 @@
 <template>
   <div
     class="box-border break-words text-base-content transition-all min-h-screen bg-gradient-to-tr from-primary to-secondary"
-    :data-theme="store.$state.active">
+    :data-theme="store.active">
     <div class="min-h-screen w-full bg-base-100 bg-opacity-95">
       <NuxtPage />
     </div>
@@ -11,6 +11,7 @@
 <script setup lang="ts">
 import { useThemeStore } from "./stores/theme"
 const store = useThemeStore()
+console.log(store.active)
 </script>
 
 <style>
