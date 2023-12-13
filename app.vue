@@ -12,8 +12,9 @@
 import { useThemeStore } from "./stores/theme"
 const store = useThemeStore()
 onMounted(() => {
-  console.log(store.$state.active)
-  store.$state.active = store.$state.active
+  const oldTheme = store.$state.active
+  store.$state.active = ""
+  store.$state.active = oldTheme
 })
 </script>
 
