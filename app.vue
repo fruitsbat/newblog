@@ -11,6 +11,11 @@
 <script setup lang="ts">
 import { useThemeStore } from "./stores/theme"
 const store = useThemeStore()
+const theme = ref(store.$state.active)
+
+watch(store.$state.active, () => {
+  console.log("theme changed")
+})
 </script>
 
 <style>
