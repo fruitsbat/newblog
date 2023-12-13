@@ -10,11 +10,7 @@ export default defineNuxtConfig({
     },
   },
   piniaPersistedstate: {
-    cookieOptions: {
-      sameSite: "strict",
-      expires: new Date(new Date().getFullYear() + 2, 1, 1),
-    },
-    storage: "cookies",
+    storage: "localStorage",
   },
   nitro: {
     prerender: {

@@ -11,7 +11,6 @@
 <script setup lang="ts">
 import { useThemeStore } from "./stores/theme"
 const { $state } = useThemeStore()
-console.log($state.active)
 </script>
 
 <style>
