@@ -11,7 +11,7 @@ export default defineNuxtConfig({
   },
   piniaPersistedstate: {
     cookieOptions: {
-      sameSite: "strict",
+      sameSite: "lax",
     },
     storage: "cookies",
   },
