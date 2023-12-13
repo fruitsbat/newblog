@@ -16,6 +16,10 @@ const theme = ref(store.$state.active)
 watch(store.$state.active, () => {
   theme.value = store.$state.active
 })
+
+onMounted(() => {
+  theme.value = store.$state.active
+})
 </script>
 
 <style>
