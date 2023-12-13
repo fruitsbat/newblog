@@ -15,6 +15,11 @@ export default defineNuxtConfig({
     },
     storage: "cookies",
   },
+  nitro: {
+    prerender: {
+      routes: ["/index.xml"],
+    },
+  },
   app: {
     pageTransition: { name: "page", mode: "out-in" },
     head: {

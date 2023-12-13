@@ -21,5 +21,5 @@
 <script setup lang="ts">
 import ContactDetails from '~/components/ContactDetails.vue';
 import ThemeSwitcher from '~/components/ThemeSwitcher.vue';
-import { GlobeAltIcon, RssIcon } from '@heroicons/vue/24/solid';
+import { GlobeAltIcon } from '@heroicons/vue/24/solid';
 </script>
