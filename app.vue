@@ -12,6 +12,9 @@
 import { useThemeStore } from "./stores/theme"
 const store = useThemeStore()
 const { active } = storeToRefs(store)
+watch(active, () => {
+  console.log(`theme: ${active}`)
+})
 </script>
 
 <style>
