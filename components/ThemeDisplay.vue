@@ -1,6 +1,5 @@
 <template>
-    <button class="btn h-[120px] p-0 border-0 btn-block" :data-theme="themeName"
-        @click="$state.active = themeName as Theme">
+    <button class="btn h-[120px] p-0 border-0 btn-block" :data-theme="themeName" @click="$state.active = themeName">
         <div class="w-full h-full flex">
             <div class="flex-grow flex-col flex items-end justify-center p-4 gap-2">
                 <div class="flex flex-row gap-2 items-center justify-end">
@@ -26,10 +25,10 @@
 
 <script setup lang="ts">
 import { CheckCircleIcon } from "@heroicons/vue/24/outline";
-import { Theme } from "../stores/theme"
+import type { PropType } from "vue";
 const props = defineProps({
     themeName: {
-        type: String,
+        type: Object as PropType<string>,
         required: true,
     }
 })

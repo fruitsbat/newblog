@@ -5,7 +5,7 @@
             <span class="font-macondo text-6xl">theme</span>
         </h2>
         <ThemeDisplay v-for="theme in pickableThemes" :theme-name="theme" />
-        <button class="btn" @click="$state.active = Theme.None">
+        <button class="btn" @click="$state.active = ''">
             <TrashIcon class="w-6 h-6" />
             <span>reset</span>
         </button>
@@ -13,14 +13,11 @@
 </template> 
 
 <script setup lang="ts">
-import { Theme, useThemeStore } from "../stores/theme"
+import { useThemeStore } from "../stores/theme"
 import ThemeDisplay from "./ThemeDisplay.vue";
 import { TrashIcon, SparklesIcon } from "@heroicons/vue/24/solid"
-const pickableThemes: Array<Theme> = [
-    Theme.Sleepy,
-    Theme.PostIt,
-    Theme.Magic,
-    Theme.Minty,
+const pickableThemes: Array<string> = [
+    "sleepy", "post-it", "magic", "minty"
 ]
 
 const { $state } = useThemeStore()
