@@ -1,7 +1,7 @@
 <template>
   <div
     class="box-border break-words text-base-content transition-all min-h-screen bg-gradient-to-tr from-primary to-secondary"
-    :data-theme="store.$state.active">
+    :data-theme="theme">
     <div class="min-h-screen w-full bg-base-100 bg-opacity-95">
       <NuxtPage />
     </div>
@@ -14,7 +14,7 @@ const store = useThemeStore()
 const theme = ref(store.$state.active)
 
 watch(store.$state.active, () => {
-  console.log("theme changed")
+  theme.value = store.$state.active
 })
 </script>
 
