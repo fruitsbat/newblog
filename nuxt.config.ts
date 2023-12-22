@@ -1,7 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ["@pinia/nuxt", "@vueuse/nuxt"],
+  modules: ["@pinia/nuxt", "@vueuse/nuxt", "@pinia-plugin-persistedstate/nuxt"],
+  piniaPersistedstate: {
+    storage: "localStorage",
+  },
   css: ["~/assets/css/main.css"],
   postcss: {
     plugins: {
