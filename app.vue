@@ -4,7 +4,7 @@
       class="box-border break-words text-base-content transition-all min-h-screen bg-gradient-to-tr from-primary to-secondary"
       :data-theme="active"
     >
-      <div class="min-h-screen w-full bg-base-100 bg-opacity-95">
+      <div class="min-h-screen w-full bg-base-100 bg-opacity-100">
         <NuxtPage />
       </div>
     </div>
