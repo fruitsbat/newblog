@@ -86,6 +86,14 @@ export default {
           "neutral": "#e0f2fe",
           "base-200": "#000408",
           "base-100": "#000000",
+        },
+        funky: {
+          "primary": "#ff5e81",
+          "base-100": "ffd337",
+          "base-200": "#ffdc5e",
+          "secondary": "#5effdc",
+          "accent": "#68ded3",
+          "neutral": "#1b1501"
         }
       }
     ],
