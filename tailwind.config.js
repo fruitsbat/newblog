@@ -76,6 +76,15 @@ export default {
           neutral: "#0a1d12"
         },
       },
+      {
+        oled: {
+          "primary": "#fde047",
+          "secondary": "#f43f5e",
+          "accent": "#93c5fd",
+          "neutral": "#e0f2fe",
+          "base-100": "#000000",
+          "base-200": "#111827"
+      }}
     ],
   },
 };
