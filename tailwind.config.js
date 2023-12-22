@@ -41,7 +41,9 @@ export default {
           secondary: "#8FEFBD",
           accent: "#5FE1E8",
           neutral: "#1A0E04",
-          "base-100": "#FDF6ED",
+          "base-100": "#fbeddb",
+          "base-200": "#fdf6ed",
+          "base-300": "#ffffff"
         },
       },
       {
@@ -63,7 +65,7 @@ export default {
           primary: "#c9dab8",
           secondary: "#ffddcb",
           accent: "#f3b5a8",
-          neutral: "#162841",
+          neutral: "#ffffff",
         },
       },
       {
