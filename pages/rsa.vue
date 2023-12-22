@@ -1,7 +1,10 @@
 <template>
-    <div class="prose p-8">
+    <div class="flex gap-4 p-4 items-center">
         <HomeButton />
-        <h1>rsa</h1>
+        <span class="items-center font-black text-4xl">rsa calculator</span>
+    </div>
+    <div class="prose p-8">
+
         <h2>generate keys</h2>
         <p>the first step is picking two prime numbers:</p>
         <div class="flex gap-4">
@@ -61,6 +64,16 @@
         {{ phi }} * {{ privateKey.belowZeroCount }} + {{ extendedEuclideanAlgorithm.at(-1)?.oldT }} = {{ privateKey.key }}
         this means that we can use {{ `(${privateKey.key}, ${n})` }} as a private key.
         </p>
+        <!-- <h2>encoding the message</h2>
+        <p>
+            we can encode our message <input class="input" type="number" v-model="message" /> using either of the keys
+            usually this is done with public key.
+            if we encrypt something with a public key it ensures that only the person with the private key can decrypt it.
+            {{ message }}<sup>{{ chosenPublicKey }}</sup> mod {{ n }} = {{ encryptedMessage }}.
+
+            we can also decrypt it using our private key:
+            {{ encryptedMessage }}<sup>{{ privateKey.key }}</sup> mod {{ n }} = {{ decryptedMessage }}.
+        </p> -->
     </div>
 </template>
 
@@ -167,5 +180,15 @@ const privateKey = computed(() => {
         key += phi.value
     }
     return { key: key % phi.value, belowZeroCount: iterations }
+})
+
+const message = ref(1337)
+
+const encryptedMessage = computed(() => {
+    return Math.pow(message.value, chosenPublicKey.value) % n.value
+})
+
+const decryptedMessage = computed(() => {
+    return Math.pow(encryptedMessage.value, privateKey.value.key) % n.value
 })
 </script>

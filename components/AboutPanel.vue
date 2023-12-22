@@ -1,9 +1,9 @@
 <template>
     <div class="@container">
-        <div class="grid w-full h-full gap-4 @lg:grid-cols-2">
+        <div class="grid w-full h-full gap-4 @2xl:grid-cols-2">
             <ThemeSwitcher class="@md:row-span-2" />
             <ContactDetails class="text-primary-content" />
-            <NuxtLink class="btn-secondary h-full min-h-[120px] p-4 rounded-3xl btn group @lg:row-span-2"
+            <NuxtLink class="btn-secondary h-full min-h-[120px] p-4 rounded-3xl btn group @2xl:row-span-2"
                 to="https://ring.bicompact.space/">
                 <h2 class="flex gap-4 font-syncopate items-center text-secondary-content">
                     <GlobeAltIcon class="w-12 h-12 group-hover:animate-spin" />
