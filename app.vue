@@ -1,20 +1,23 @@
 <template>
-  <div
-    class="box-border break-words text-base-content transition-all min-h-screen bg-gradient-to-tr from-primary to-secondary"
-    :data-theme="active">
-    <div class="min-h-screen w-full bg-base-100 bg-opacity-95">
-      <NuxtPage />
+  <ClientOnly>
+    <div
+      class="box-border break-words text-base-content transition-all min-h-screen bg-gradient-to-tr from-primary to-secondary"
+      :data-theme="active"
+    >
+      <div class="min-h-screen w-full bg-base-100 bg-opacity-95">
+        <NuxtPage />
+      </div>
     </div>
-  </div>
+  </ClientOnly>
 </template>
 
 <script setup lang="ts">
-import { useThemeStore } from "./stores/theme"
-const store = useThemeStore()
-const { active } = storeToRefs(store)
+import { useThemeStore } from "./stores/theme";
+const store = useThemeStore();
+const { active } = storeToRefs(store);
 watch(active, () => {
-  console.log(`theme: ${active.value}`)
-})
+  console.log(`theme: ${active.value}`);
+});
 </script>
 
 <style>

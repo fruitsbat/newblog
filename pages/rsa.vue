@@ -3,6 +3,7 @@
         <HomeButton />
         <h1>rsa</h1>
         <h2>generate keys</h2>
+        <p>the first step is picking two prime numbers:</p>
         <div class="flex gap-4">
             <div class="flex flex-col gap-2">
                 <span class="font-bold">p=</span>
