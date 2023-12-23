@@ -1,8 +1,8 @@
 <template>
     <div>
-        <div class="grid lg:grid-cols-3 gap-8 p-8">
-            <AboutPanel />
-            <ContentNavigation class="lg:col-span-2" />
+        <div class="grid lg:grid-cols-5 gap-4 p-8">
+            <ContentNavigation class="lg:col-span-3" />
+            <AboutPanel class="lg:col-span-2" />
         </div>
     </div>
 </template>
