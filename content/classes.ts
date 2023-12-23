@@ -79,3 +79,12 @@ export class Music extends FeedItem {
     this.coverImage = data.coverImage;
   }
 }
+
+export class Sticker extends FeedItem {
+  image: Image;
+
+  constructor(data: { image: Image } & FeedItemInputData) {
+    super(data);
+    this.image = data.image;
+  }
+}

@@ -4,12 +4,13 @@
         <li class="h-full" v-for="(item, index) in shownItems" :key="item.id">
             <ContentBlogpostCard v-if="(item instanceof Page)" :post="item" />
             <ContentMusicCard v-else-if="(item instanceof Music)" :music="item" />
+            <ContentStickerCard v-else-if="(item instanceof Sticker)" :sticker="item" />
         </li>
     </TransitionGroup>
 </template>
 
 <script setup lang="ts">
-import { Page, Content, Music } from '../content/classes';
+import { Page, Content, Music, Sticker } from '../content/classes';
 
 defineProps({
     shownItems: {

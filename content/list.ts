@@ -1,4 +1,4 @@
-import { type Content, Page, Music } from "./classes";
+import { type Content, Page, Music, Sticker } from "./classes";
 export const contentList: Array<Content> = [
   new Page({
     title: "starchart",
@@ -18,6 +18,20 @@ export const contentList: Array<Content> = [
     image: {
       description: "a stock photo of a lock",
       link: "/image/lock.webp",
+    },
+  }),
+  new Sticker({
+    created: new Date(2023, 12, 23),
+    image: {
+      description: "a pixelart image of an orange",
+      link: "/image/lemon.webp",
+    },
+    link: "/image/lemon.webp",
+    title: "pixel orange",
+    enclosure: {
+      url: "https://zoe.kittycat.homes/image/lemon.webp",
+      type: "image/webp",
+      title: "pixel orange",
     },
   }),
   new Page({
@@ -43,14 +57,14 @@ export const contentList: Array<Content> = [
     },
   }),
   new Page({
-    title:  "kaokao",
+    title: "kaokao",
     created: new Date(2023, 4, 11),
     image: {
       description: "an emoji being picked using kaokao",
       link: "/image/kaokao.webp",
     },
     summary: "an emoji picker written in rust with support for kaomoji",
-    link: "https://github.com/fruitsbat/kaokao"
+    link: "https://github.com/fruitsbat/kaokao",
   }),
   new Page({
     title: "untitled plant game",
@@ -91,7 +105,8 @@ export const contentList: Array<Content> = [
       link: "/image/ai.webp",
     },
     link: "https://fruitsbat.github.io/gigo/",
-    summary: "an interactive article about metamorphic testing i wrote for university"
+    summary:
+      "an interactive article about metamorphic testing i wrote for university",
   }),
   new Page({
     title: "rssmatrix",
