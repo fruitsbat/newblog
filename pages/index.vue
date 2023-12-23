@@ -1,6 +1,5 @@
 <template>
     <div>
-        <AboutMe />
         <div class="grid lg:grid-cols-3 gap-8 p-8">
             <AboutPanel />
             <ContentNavigation class="lg:col-span-2" />

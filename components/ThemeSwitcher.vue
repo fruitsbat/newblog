@@ -10,7 +10,7 @@
             <span>reset</span>
         </button>
     </div>
-</template> 
+</template>
 
 <script setup lang="ts">
 import { useThemeStore } from "../stores/theme"
