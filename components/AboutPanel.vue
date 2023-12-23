@@ -1,7 +1,8 @@
 <template>
   <div class="@container">
-    <div class="grid w-full h-full gap-4 @3xl:grid-cols-3">
-      <div class="min-w-full @3xl:col-span-3 bg-neutral text-neutral-content rounded-3xl p-8 prose w-full">
+    <div class="grid w-full h-full gap-4 @3xl:grid-cols-5">
+      <div class="grid gap-4 @3xl:col-span-2">
+        <div class="min-w-full bg-neutral text-neutral-content rounded-3xl p-8 prose w-full">
         <h2 class="font-euclid text-6xl text-neutral-content">about</h2>
         <p>
             hi! i'm zoe.
@@ -22,8 +23,10 @@
             i also love <NuxtLink class="text-neutral-content" to="https://tiger.kittycat.homes">my girlfriend lotte</NuxtLink>!
         </p>
       </div>
-      <ThemeSwitcher class="@md:row-span-5" />
-      <ContactDetails class="text-primary-content row-span-3 @3xl:col-span-2" />
+      <ThemeSwitcher class="" />
+      </div>
+      <div class="@3xl:col-span-3 grid">
+        <ContactDetails class="text-primary-content @3xl:col-span-2" />
       <div
         class="flex flex-col h-full justify-center items-center @3xl:col-span-2"
       >
@@ -70,6 +73,8 @@
             <span class="text-3xl font-ka1">itch.io</span>
           </h2>
         </NuxtLink>
+      </div>
+
       </div>
     </div>
   </div>
