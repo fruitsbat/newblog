@@ -1,4 +1,4 @@
-import { contentList, newestDate } from "~/content/list";
+import { contentSortedByDate, newestDate } from "~/content/list";
 import { Feed } from "feed";
 import { FeedItem } from "~/content/classes";
 
@@ -15,7 +15,7 @@ export default defineEventHandler(async (event) => {
     language: "en",
   });
 
-  contentList
+  contentSortedByDate()
     .filter((contentItem) => {
       return contentItem instanceof FeedItem;
     })

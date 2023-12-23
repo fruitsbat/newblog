@@ -11,7 +11,7 @@ export const contentList: Array<Content> = [
     link: "https://starchart.kittycat.homes",
   }),
   new Page({
-    created: new Date(11, 12, 2023),
+    created: new Date(2023, 12, 11),
     link: "/rsa",
     summary: "shows how rsa works",
     title: "rsa calculator",
@@ -48,7 +48,7 @@ export const contentList: Array<Content> = [
   new Music({
     audioFile: "/audio/z-type-ultra_howells-theme.mp3.mp3",
     title: "z-type-ultra_howells-theme.mp3",
-    created: new Date(12, 8, 2023),
+    created: new Date(2023, 12, 8),
     link: "/audio/z-type-ultra_howells-theme.mp3.mp3",
     enclosure: {
       url: "https://zoe.kittycat.homes/audio/z-type-ultra_howells-theme.mp3.mp3",
@@ -157,4 +157,10 @@ export function newestDate(): Date {
     }
   });
   return newest;
+}
+
+export function contentSortedByDate(): Array<Content> {
+  return contentList.sort((a, b) => {
+    return b.updated.getTime() - a.updated.getTime();
+  });
 }
