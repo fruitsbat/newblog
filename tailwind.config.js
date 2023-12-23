@@ -19,6 +19,9 @@ export default {
       pattaya: ["Pattaya"],
       gasoekone: ["GasoekOne"],
       glitch: ["Glitch"],
+      flexi: ["Flexi"],
+      ka1: ["ka1"],
+      euclid: ["Euclid"],
     },
     extend: {
       backgroundImage: {
@@ -43,7 +46,7 @@ export default {
           neutral: "#1A0E04",
           "base-100": "#fbeddb",
           "base-200": "#fdf6ed",
-          "base-300": "#ffffff"
+          "base-300": "#ffffff",
         },
       },
       {
@@ -75,27 +78,27 @@ export default {
           primary: "#3ed37c",
           secondary: "#86eab0",
           accent: "#4de98e",
-          neutral: "#0a1d12"
+          neutral: "#0a1d12",
         },
       },
       {
         oled: {
-          "primary": "#fde047",
-          "secondary": "#f43f5e",
-          "accent": "#06b6d4",
-          "neutral": "#e0f2fe",
+          primary: "#fde047",
+          secondary: "#f43f5e",
+          accent: "#06b6d4",
+          neutral: "#e0f2fe",
           "base-200": "#000408",
           "base-100": "#000000",
         },
         funky: {
-          "primary": "#ff5e81",
+          primary: "#ff5e81",
           "base-100": "ffd337",
           "base-200": "#ffdc5e",
-          "secondary": "#5effdc",
-          "accent": "#68ded3",
-          "neutral": "#1b1501"
-        }
-      }
+          secondary: "#5effdc",
+          accent: "#68ded3",
+          neutral: "#1b1501",
+        },
+      },
     ],
   },
 };

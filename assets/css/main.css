@@ -55,3 +55,18 @@
   font-family: "Glitch";
   src: url("/font/RubikGlitch-Regular.woff2");
 }
+
+@font-face {
+  font-family: "Flexi";
+  src: url("/font/Flexi-IBM.woff2");
+}
+
+@font-face {
+  font-family: "ka1";
+  src: url("/font/ka1.woff2");
+}
+
+@font-face {
+  font-family: "Euclid";
+  src: url("/font/Euclid.woff2");
+}
