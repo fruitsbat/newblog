@@ -87,7 +87,7 @@ export default {
           secondary: "#f43f5e",
           accent: "#06b6d4",
           neutral: "#e0f2fe",
-          "base-200": "#000408",
+          "base-200": "#111827",
           "base-100": "#000000",
         },
         funky: {
