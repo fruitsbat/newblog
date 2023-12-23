@@ -27,7 +27,7 @@
       <div
         class="flex flex-col h-full justify-center items-center @3xl:col-span-2"
       >
-        <img clas="w-full h-auto" src="/image/me.webp" />
+        <img class="w-full h-auto" src="/image/me.webp" alt="a pixelart image of a person with messy brown hair wearing a black dress. there's an arrow pointing at it that says 'me'"/>
       </div>
       <div class="grid gap-4 grid-cols-2 @3xl:col-span-2">
         <a
