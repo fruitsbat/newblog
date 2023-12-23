@@ -17,7 +17,7 @@ import { useThemeStore } from "../stores/theme"
 import ThemeDisplay from "./ThemeDisplay.vue";
 import { TrashIcon, SparklesIcon } from "@heroicons/vue/24/solid"
 const pickableThemes: Array<string> = [
-    "sleepy", "post-it", "magic", "minty"
+    "sleepy", "post-it", "magic", "minty", "oled", "funky"
 ]
 
 const { $state } = useThemeStore()

@@ -41,7 +41,9 @@ export default {
           secondary: "#8FEFBD",
           accent: "#5FE1E8",
           neutral: "#1A0E04",
-          "base-100": "#FDF6ED",
+          "base-100": "#fbeddb",
+          "base-200": "#fdf6ed",
+          "base-300": "#ffffff"
         },
       },
       {
@@ -63,7 +65,7 @@ export default {
           primary: "#c9dab8",
           secondary: "#ffddcb",
           accent: "#f3b5a8",
-          neutral: "#162841",
+          neutral: "#ffffff",
         },
       },
       {
@@ -76,6 +78,24 @@ export default {
           neutral: "#0a1d12"
         },
       },
+      {
+        oled: {
+          "primary": "#fde047",
+          "secondary": "#f43f5e",
+          "accent": "#06b6d4",
+          "neutral": "#e0f2fe",
+          "base-200": "#000408",
+          "base-100": "#000000",
+        },
+        funky: {
+          "primary": "#ff5e81",
+          "base-100": "ffd337",
+          "base-200": "#ffdc5e",
+          "secondary": "#5effdc",
+          "accent": "#68ded3",
+          "neutral": "#1b1501"
+        }
+      }
     ],
   },
 };

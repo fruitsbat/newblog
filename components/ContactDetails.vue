@@ -17,7 +17,7 @@
         to="https://discordapp.com/users/200666655016091648"
         >discord</NuxtLink
       >.
-      emailing <a class="link" href="mailto:zoe@kitycat.homes">zoe@kittycat.homes</a> works too.
+      emailing <a class="link" href="mailto:zoe@kittycat.homes">zoe@kittycat.homes</a> works too.
     </p>
     <p>
       i can also be found on other places on the internet such as
