@@ -35,6 +35,16 @@ export const contentList: Array<Content> = [
     },
   }),
   new Page({
+    created: new Date(2023, 8, 10),
+    image: {
+      link: "/image/pico8Odroid.webp",
+      description: "pico 8 running on the odroid go ultra",
+    },
+    link: "/pico8OnOdroid",
+    summary: "a guide on how to run pico8 games on the odroid go ultra",
+    title: "pico 8 on odroid go ultra",
+  }),
+  new Page({
     title: "mystery creature",
     created: new Date(2023, 2, 4),
     image: {

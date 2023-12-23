@@ -5,7 +5,9 @@
       :data-theme="active"
     >
       <div class="min-h-screen w-full bg-base-100 bg-opacity-100">
-        <NuxtPage />
+        <NuxtLayout>
+          <NuxtPage />
+        </NuxtLayout>
       </div>
     </div>
   </ClientOnly>
