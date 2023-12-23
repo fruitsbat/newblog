@@ -3,7 +3,7 @@
     <div class="grid w-full h-full gap-4 @3xl:grid-cols-5">
       <div class="grid gap-4 @3xl:col-span-2">
         <div class="min-w-full bg-neutral text-neutral-content rounded-3xl p-8 prose w-full">
-        <h2 class="font-euclid text-6xl text-neutral-content">about</h2>
+        <h2 class="font-euclid text-5xl text-neutral-content">about</h2>
         <p>
             hi! i'm zoe.
             welcome to my website.
@@ -28,7 +28,7 @@
       <div class="@3xl:col-span-3 grid">
         <ContactDetails class="text-primary-content @3xl:col-span-2" />
       <div
-        class="flex flex-col h-full justify-center items-center @3xl:col-span-2"
+        class="flex flex-col h-full row-span-3 justify-center items-center @3xl:col-span-2"
       >
         <img class="w-full h-auto" src="/image/me.webp" alt="a pixelart image of a person with messy brown hair wearing a black dress. there's an arrow pointing at it that says 'me'"/>
       </div>
