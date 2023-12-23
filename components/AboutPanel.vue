@@ -1,7 +1,7 @@
 <template>
   <div class="@container">
     <div class="grid w-full h-full gap-4 @3xl:grid-cols-3">
-      <div class="@3xl:col-span-3 bg-neutral text-neutral-content rounded-3xl p-4 prose w-full">
+      <div class="min-w-full @3xl:col-span-3 bg-neutral text-neutral-content rounded-3xl p-4 prose w-full">
         <h2 class="font-euclid text-6xl text-neutral-content">about</h2>
         <p>
             hi! i'm zoe.
