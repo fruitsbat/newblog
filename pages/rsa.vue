@@ -63,16 +63,24 @@
         }}
         this means that we can use {{ `(${privateKey.key}, ${n})` }} as a private key.
         </p>
-        <!-- <h2>encoding the message</h2>
+        <h2>encoding the message</h2>
         <p>
-            we can encode our message <input class="input" type="number" v-model="message" /> using either of the keys
-            usually this is done with public key.
-            if we encrypt something with a public key it ensures that only the person with the private key can decrypt it.
-            {{ message }}<sup>{{ chosenPublicKey }}</sup> mod {{ n }} = {{ encryptedMessage }}.
-
-            we can also decrypt it using our private key:
-            {{ encryptedMessage }}<sup>{{ privateKey.key }}</sup> mod {{ n }} = {{ decryptedMessage }}.
-        </p> -->
+            we can now encrypt a message where 1 ≤ message &lt {{ n }}.
+            this is usually no problem since text, images and other arbitrary data can also be
+            be encoded using numbers. when using rsa in real life we also work with much larger numbers than here.
+            {{ n }} would be much too small in a real world application.
+        </p>
+        <p>
+            let's pick a message: <input class="input input-bordered" type="number" min="1" :max="n - 1"
+                v-model="message" />
+            between 1 and {{ n - 1 }}.
+            our encoded message can now be: {{ message }}<sup>{{ chosenPublicKey }}</sup>(mod {{ n }}) = {{ encryptedMessage
+            }}.
+        </p>
+        <p>
+            we can decode it using the private key: {{ encryptedMessage }}<sup>{{ privateKey.key }}</sup>(mod {{ n }}) = {{
+                decryptedMessage }}
+        </p>
     </div>
 </template>
 
@@ -185,13 +193,17 @@ const privateKey = computed(() => {
     return { key: key % phi.value, belowZeroCount: iterations }
 })
 
-const message = ref(1337)
+const message = ref(3)
 
 const encryptedMessage = computed(() => {
     return Math.pow(message.value, chosenPublicKey.value) % n.value
 })
 
 const decryptedMessage = computed(() => {
-    return Math.pow(encryptedMessage.value, privateKey.value.key) % n.value
+    let solution = encryptedMessage.value;
+    Array.from(Array(privateKey.value.key - 1)).forEach(() => {
+        solution = (solution * encryptedMessage.value) % n.value
+    })
+    return solution % n.value
 })
 </script>
