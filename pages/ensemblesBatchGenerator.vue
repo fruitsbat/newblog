@@ -1,6 +1,6 @@
 <template>
     <div>
-        <HomeButton />
+        <HeadingWithHomeButton title="batch script generator for numio ensembles" />
         hehe
     </div>
 </template>
