@@ -23,7 +23,7 @@ import { contentList } from "~/content/list";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/vue/24/outline";
 
 const page = ref(0);
-const itemsPerPage = 6;
+const itemsPerPage = 24;
 const startIndex = computed(() => {
     return page.value * itemsPerPage;
 });

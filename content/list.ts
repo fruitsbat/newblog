@@ -14,6 +14,16 @@ export const contentList: Array<Content> = [
       title: "low poly strawberry",
     },
   }),
+  new Music({
+    audioFile: "/audio/beepy.mp3",
+    title: "beepy",
+    created: new Date(2024, 1, 26),
+    link: "/audio/beepy.mp3",
+    enclosure: {
+      url: "https://zoe.kittycat.homes/audio/beepy.mp3",
+      type: "audio/mp3",
+    },
+  }),
   new Page({
     title: "starchart",
     summary: "an art project that lets you generate planets for everyone",
