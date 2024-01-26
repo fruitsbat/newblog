@@ -196,12 +196,16 @@ const privateKey = computed(() => {
 const message = ref(3)
 
 const encryptedMessage = computed(() => {
-    return Math.pow(message.value, chosenPublicKey.value) % n.value
+    let solution = message.value;
+    Array(chosenPublicKey.value - 1).forEach(() => {
+        solution = (solution * message.value) % n.value
+    })
+    return solution
 })
 
 const decryptedMessage = computed(() => {
     let solution = encryptedMessage.value;
-    Array.from(Array(privateKey.value.key - 1)).forEach(() => {
+    Array(privateKey.value.key - 1).forEach(() => {
         solution = (solution * encryptedMessage.value) % n.value
     })
     return solution % n.value
