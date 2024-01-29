@@ -9,7 +9,7 @@
             welcome to my website.
         </p>
         <p>
-            i'm a 23 year old univerity student from hamburg.
+            i'm a 23 year old university student from hamburg.
             you may believe it or not but there are some things i enjoy doing.
             these include but are not limited to:
             <ul>
