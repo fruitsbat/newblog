@@ -1,6 +1,6 @@
 <template>
     <TransitionGroup name="list" tag="ul"
-        class="grid gap-4 rounded-3xl flex-grow grid-cols-1 @2xl:grid-cols-3 transition-all">
+        class="grid gap-4 rounded-3xl flex-grow grid-cols-1 @2xl:grid-cols-3 @6xl:grid-cols-5 transition-all">
         <li class="h-full" v-for="(item, index) in shownItems" :key="item.id">
             <ContentBlogpostCard v-if="(item instanceof Page)" :post="item" />
             <ContentMusicCard v-else-if="(item instanceof Music)" :music="item" />
