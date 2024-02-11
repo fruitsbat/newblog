@@ -52,7 +52,7 @@
             <ArrowLeftIcon class="w-6 h-6"/>
             <span>previous</span>
           </NuxtLink>
-          <NuxtLink class="font-syncopate btn flex flex-col p-4 flex-nowrap h-auto rounded-3xls" to="https://webring.kittycat.homes/next/zoe">
+          <NuxtLink class="font-syncopate btn flex flex-col p-4 flex-nowrap h-auto rounded-3xl" to="https://webring.kittycat.homes/next/zoe">
             <ArrowRightIcon class="w-6 h-6"/>
             <span>next</span>
           </NuxtLink>
