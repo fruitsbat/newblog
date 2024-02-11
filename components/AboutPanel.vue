@@ -38,7 +38,7 @@
           href="/index.xml"
         >
           <h2 class="flex gap-4 items-center">
-            <span class="text-5xl font-glitch group-hover:drop-shadow-2xl"
+            <span class="text-5xl font-glitch"
               >feed</span
             >
           </h2>
