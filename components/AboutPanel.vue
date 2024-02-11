@@ -43,17 +43,7 @@
             >
           </h2>
         </a>
-        <NuxtLink
-          class="btn-accent h-full min-h-[120px] p-4 rounded-3xl btn group"
-          to="https://ring.bicompact.space/"
-        >
-          <h2
-            class="flex gap-4 font-syncopate items-center text-secondary-content"
-          >
-            <GlobeAltIcon class="w-12 h-12 group-hover:animate-spin" />
-            <span class="text-lg font-syncopate">web<br />ring</span>
-          </h2>
-        </NuxtLink>
+        <iframe class="h-full rounded-3xl" src="https://webring.kittycat.homes/frame/zoe" />
         <NuxtLink
           class="btn-primary h-full min-h-[120px] p-4 rounded-3xl btn group"
           to="https://github.com/fruitsbat"
