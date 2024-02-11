@@ -73,10 +73,10 @@
 
 @layer utilities {
   .retro-stripes {
-    background-image: linear-gradient(-10deg,
+    background-image: linear-gradient(-7deg,
         transparent 0% 25%,
         theme('colors.secondary') 25% 45%,
-        transparent 45% 55%,
+        theme('colors.base-200') 45% 55%,
         theme('colors.primary') 55% 75%,
         transparent 75% 100%);
   }
