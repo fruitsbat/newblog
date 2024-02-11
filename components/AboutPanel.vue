@@ -43,7 +43,20 @@
             >
           </h2>
         </a>
-        <iframe class="h-full rounded-3xl" src="https://webring.kittycat.homes/frame/zoe" />
+        <div class="grid grid-cols-2 gap-4">
+          <NuxtLink class="col-span-2 btn text-4xl font-syncopate h-48 rounded-3xl" to="https://webring.kittycat.homes">
+            <GlobeAltIcon class="w-24 h-24" />
+            <span>web<br />ring</span>
+          </NuxtLink>
+          <NuxtLink class="font-syncopate btn flex flex-col p-4 flex-nowrap h-auto rounded-3xl" to="https://webring.kittycat.homes/previous/zoe">
+            <ArrowLeftIcon class="w-6 h-6"/>
+            <span>previous</span>
+          </NuxtLink>
+          <NuxtLink class="font-syncopate btn flex flex-col p-4 flex-nowrap h-auto rounded-3xls" to="https://webring.kittycat.homes/next/zoe">
+            <ArrowRightIcon class="w-6 h-6"/>
+            <span>next</span>
+          </NuxtLink>
+        </div>
         <NuxtLink
           class="btn-primary h-full min-h-[120px] p-4 rounded-3xl btn group"
           to="https://github.com/fruitsbat"
@@ -73,5 +86,5 @@
 <script setup lang="ts">
 import ContactDetails from "~/components/ContactDetails.vue";
 import ThemeSwitcher from "~/components/ThemeSwitcher.vue";
-import { GlobeAltIcon, CodeBracketIcon } from "@heroicons/vue/24/solid";
+import { GlobeAltIcon, CodeBracketIcon, ArrowLeftIcon, ArrowRightIcon } from "@heroicons/vue/24/solid";
 </script>
