@@ -44,7 +44,7 @@
           </h2>
         </a>
         <div class="grid grid-cols-2 gap-4">
-          <NuxtLink class="col-span-2 btn text-4xl font-syncopate h-48 rounded-3xl" to="https://webring.kittycat.homes">
+          <NuxtLink class="col-span-2 btn text-4xl font-syncopate h-full rounded-3xl" to="https://webring.kittycat.homes">
             <GlobeAltIcon class="w-24 h-24" />
             <span>web<br />ring</span>
           </NuxtLink>
