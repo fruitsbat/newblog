@@ -10,11 +10,11 @@
         <NuxtLayout>
           <NuxtPage />
         </NuxtLayout>
+        <footer class="text-center text-sm p-2">
+          kittycats rule teh world forevah © 2024
+        </footer>
       </div>
     </div>
-    <footer class="text-center text-sm">
-      kittycats rule teh world forevah © 2024
-    </footer>
   </ClientOnly>
 </template>
 
