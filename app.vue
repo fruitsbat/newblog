@@ -12,6 +12,9 @@
         </NuxtLayout>
       </div>
     </div>
+    <footer class="text-center text-sm">
+      kittycats rule teh world forevah © 2024
+    </footer>
   </ClientOnly>
 </template>
 
