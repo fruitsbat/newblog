@@ -22,6 +22,7 @@ export default {
       flexi: ["Flexi"],
       ka1: ["ka1"],
       euclid: ["Euclid"],
+      glockenspiel: ["glockenspiel"],
     },
     extend: {
       backgroundImage: {

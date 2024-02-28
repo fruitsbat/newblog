@@ -67,7 +67,7 @@
           </h2>
         </NuxtLink>
         <NuxtLink
-          class="btn-secondary h-full min-h-[120px] p-4 rounded-3xl btn group"
+          class="btn-secondary row-span-2 h-full min-h-[120px] p-4 rounded-3xl btn group"
           to="https://fruitsbat.itch.io/"
         >
           <h2
@@ -76,8 +76,17 @@
             <span class="text-3xl font-ka1">itch.io</span>
           </h2>
         </NuxtLink>
+        <NuxtLink
+          class="btn-accent h-full min-h-[120px] p-4 col-span-1 rounded-3xl btn group"
+          to="https://music.kittycat.homes"
+        >
+          <h2
+            class="flex gap-4 items-center text-secondary-content"
+          >
+            <span class="text-3xl font-glockenspiel">music</span>
+          </h2>
+        </NuxtLink>
       </div>
-
       </div>
     </div>
   </div>

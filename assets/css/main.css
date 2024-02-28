@@ -71,13 +71,20 @@
   src: url("/font/Euclid.woff2");
 }
 
+@font-face {
+  font-family: "glockenspiel";
+  src: url("/font/glockenspiel.woff2");
+}
+
 @layer utilities {
   .retro-stripes {
-    background-image: linear-gradient(-7deg,
-        transparent 0% 25%,
-        theme('colors.secondary') 25% 45%,
-        transparent 45% 55%,
-        theme('colors.primary') 55% 75%,
-        transparent 75% 100%);
+    background-image: linear-gradient(
+      -7deg,
+      transparent 0% 25%,
+      theme("colors.secondary") 25% 45%,
+      transparent 45% 55%,
+      theme("colors.primary") 55% 75%,
+      transparent 75% 100%
+    );
   }
 }
