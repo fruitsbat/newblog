@@ -1,14 +1,14 @@
 <template>
   <ClientOnly>
     <div
-      class="box-border break-words text-base-content transition-all min-h-screen bg-gradient-to-tr from-primary to-secondary"
+      class="box-border break-words transition-all min-h-screen bg-gradient-to-tr from-primary to-secondary text-neutral"
       :data-theme="active"
     >
       <div
         class="min-h-screen flex flex-col items-stretch justify-center w-full bg-base-100 bg-opacity-100"
       >
         <NuxtLayout>
-          <NuxtPage />
+          <NuxtPage />s
         </NuxtLayout>
         <footer class="text-center text-sm p-2">
           kittycats rule teh world forevah © 2024
