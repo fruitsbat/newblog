@@ -1,9 +1,24 @@
 import { type Content, Page, Music, Sticker } from "./classes";
 export const contentList: Array<Content> = [
   new Sticker({
+    created: new Date(2024, 4, 2),
+    image: {
+      description: "an image of a pink flower",
+      link: "/image/flower.webp",
+    },
+    link: "/imager/flower.webp",
+    title: "flower",
+    enclosure: {
+      url: "https://zoe.kittycat.homes/image/strawberry.webp",
+      type: "image/webp",
+      title: "flower",
+    },
+  }),
+  new Sticker({
     created: new Date(2024, 1, 25),
     image: {
-      description: "low poly image of a strawberry the leaves have some funky patterns on them",
+      description:
+        "low poly image of a strawberry the leaves have some funky patterns on them",
       link: "/image/strawberry.webp",
     },
     link: "/image/strawberry.webp",

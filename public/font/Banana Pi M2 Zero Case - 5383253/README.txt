@@ -1,1 +1,0 @@
-Banana Pi M2 Zero Case by pret79 on Thingiverse: https://www.thingiverse.com/thing:5383253
