@@ -1,5 +1,15 @@
 import { type Content, Page, Music, Sticker } from "./classes";
 export const contentList: Array<Content> = [
+  new Page({
+    created: new Date(2024, 4, 26),
+    image: {
+      description: "an image of a waveform from amigo sampler",
+      link: "/image/waveform.webp"
+    },
+    link: "https://drive.google.com/drive/folders/1hOmCn5SupeZe4ikEmiuUDY6EajxafvB0",
+    summary: "some jungle inspired pads and basses. there are vital presets and samples.",
+    title: "Fruit Sampler V1",
+  }),
   new Sticker({
     created: new Date(2024, 4, 2),
     image: {
