@@ -31,5 +31,8 @@
     "uuid": "^9.0.1",
     "vue": "^3.3.10",
     "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@fortawesome/vue-fontawesome": "^3.0.8"
   }
 }

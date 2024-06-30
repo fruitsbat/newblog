@@ -8,7 +8,7 @@
         class="min-h-screen flex flex-col items-stretch justify-center w-full bg-base-100 bg-opacity-100"
       >
         <NuxtLayout>
-          <NuxtPage />s
+          <NuxtPage />
         </NuxtLayout>
         <footer class="text-center text-sm p-2">
           kittycats rule teh world forevah © 2024

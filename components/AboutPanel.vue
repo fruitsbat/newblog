@@ -78,7 +78,7 @@
         </NuxtLink>
         <NuxtLink
           class="btn-accent h-full min-h-[120px] p-4 col-span-1 rounded-3xl btn group"
-          to="https://music.kittycat.homes"
+          to="/music"
         >
           <h2
             class="flex gap-4 items-center text-secondary-content"
