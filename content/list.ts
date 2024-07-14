@@ -1,13 +1,26 @@
 import { type Content, Page, Music, Sticker } from "./classes";
 export const contentList: Array<Content> = [
   new Page({
+    created: new Date(2024, 5, 10),
+    image: {
+      link: "/image/riverCover.webp",
+      description:
+        "an abstract image with blue and green, it looks a bit like cells under a microscope",
+    },
+    link: "https://zoebat.bandcamp.com/album/river",
+    summary:
+      "an ambient jungle album available on bandcamp and pretty much anywhere else",
+    title: "river",
+  }),
+  new Page({
     created: new Date(2024, 4, 26),
     image: {
       description: "an image of a waveform from amigo sampler",
-      link: "/image/waveform.webp"
+      link: "/image/waveform.webp",
     },
     link: "https://drive.google.com/drive/folders/1hOmCn5SupeZe4ikEmiuUDY6EajxafvB0",
-    summary: "some jungle inspired pads and basses. there are vital presets and samples.",
+    summary:
+      "some jungle inspired pads and basses. there are vital presets and samples.",
     title: "Fruit Sampler V1",
   }),
   new Sticker({
