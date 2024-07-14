@@ -1,6 +1,16 @@
 import { type Content, Page, Music, Sticker } from "./classes";
 export const contentList: Array<Content> = [
   new Page({
+    created: new Date(2024, 6, 29),
+    image: {
+      link: "/image/finalMissionCover.webp",
+      description: "an spacey looking round object in a 90s cgi style. there are lightbeams shooting from it",
+    },
+    link: "https://zoebat.bandcamp.com/album/final-mission-by-avoset-remix",
+    summary: "a remix of avosets song final mission!",
+    title: "final mission! by avoset (remix)"
+  }),
+  new Page({
     created: new Date(2024, 5, 10),
     image: {
       link: "/image/riverCover.webp",
