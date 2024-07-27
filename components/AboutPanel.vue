@@ -24,6 +24,7 @@
         </p>
       </div>
       <ThemeSwitcher class="" />
+      <SocialLinks />
       </div>
       <div class="@3xl:col-span-3 grid">
         <ContactDetails class="text-primary-content @3xl:col-span-2" />
