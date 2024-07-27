@@ -110,6 +110,14 @@ const links: link[] = [
     name: "Telmore Musik",
     link: "https://musik.telmore.dk/kunstner/79328911",
   } as link,
+  {
+    name: "YouTube Music",
+    link: "https://music.youtube.com/channel/UCbhyAweQHl5d0I3HeAfyHgw",
+  },
+  {
+    name: "Newgrounds",
+    link: "https://fruitsbat.newgrounds.com/"
+  }
 ]
   .concat(popularLinks as link[])
   .sort((a, b) => {
