@@ -29,7 +29,7 @@
 import { MagnifyingGlassIcon } from '@heroicons/vue/24/solid'
 import { type ParsedContentExtension } from '../scripts/parse_extension'
 
-const searchTerm: Ref<string> = ref('a')
+const searchTerm: Ref<string> = ref('')
 const searchResults = await searchContent(searchTerm)
 
 const getContent = async (): Promise<ParsedContentExtension[]> => {
