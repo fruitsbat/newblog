@@ -12,14 +12,14 @@
         type="search"
         class="h-full min-h-10 w-full rounded-xl bg-base-300 px-4 outline outline-2 outline-primary"
       />
-      <div class="flex gap-2">
-        <div v-for="tag in allTags">
+      <TransitionGroup class="flex gap-2" name="list" tag="ul">
+        <div v-for="tag in allTags" :key="tag[0]">
           <button @click="toggleTagSelection(tag[0])" class="badge btn">
-            <CheckBadgeIcon class="h-6 w-6" v-if="selectedTags.includes(tag[0])"></CheckBadgeIcon>
+            <CheckIcon class="h-6 w-6" v-if="selectedTags.includes(tag[0])" />
             {{ tag[0] }}
           </button>
         </div>
-      </div>
+      </TransitionGroup>
     </div>
 
     <!-- body -->
@@ -34,7 +34,7 @@
 </template>
 
 <script setup lang="ts">
-import { MagnifyingGlassIcon, CheckBadgeIcon } from '@heroicons/vue/24/solid'
+import { MagnifyingGlassIcon, CheckIcon } from '@heroicons/vue/24/solid'
 import { type ParsedContentExtension } from '../scripts/parse_extension'
 
 const searchTerm: Ref<string> = ref('')
@@ -95,7 +95,6 @@ watch(searchResults, async () => {
 })
 
 const toggleTagSelection = async (tag: string) => {
-  console.log(tag)
   if (selectedTags.value.includes(tag)) {
     selectedTags.value = selectedTags.value.filter((item) => item !== tag)
     queryResults.value = await getContent()
@@ -112,3 +111,15 @@ watch(allTags, async () => {
   queryResults.value = await getContent()
 })
 </script>
+
+<style>
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s ease-in-out;
+}
+.list-enter-from,
+.list-leave-to {
+  opacity: 0%;
+  transform: scale(0.0); 
+}
+</style>
