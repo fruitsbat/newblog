@@ -9,6 +9,14 @@ export default defineNuxtConfig({
     "@nuxt/content",
   ],
 
+  content: {
+    experimental: {
+      search: {
+        indexed: true,
+      },
+    }
+  },
+
   piniaPersistedstate: {
     storage: "localStorage",
   },

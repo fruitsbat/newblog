@@ -82,16 +82,6 @@ export const contentList: Array<Content> = [
     created: new Date(2023, 8, 26),
     link: "https://starchart.kittycat.homes",
   }),
-  new Page({
-    created: new Date(2023, 12, 11),
-    link: "/rsa",
-    summary: "shows how rsa works",
-    title: "rsa calculator",
-    image: {
-      description: "a stock photo of a lock",
-      link: "/image/lock.webp",
-    },
-  }),
   new Sticker({
     created: new Date(2023, 12, 23),
     image: {
