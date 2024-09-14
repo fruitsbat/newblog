@@ -29,19 +29,42 @@
 import { MagnifyingGlassIcon } from '@heroicons/vue/24/solid'
 import { type ParsedContentExtension } from '../scripts/parse_extension'
 
-const searchTerm: Ref<string> = ref('')
-// const searchResults = await searchContent(searchTerm)
+const searchTerm: Ref<string> = ref('a')
+const searchResults = await searchContent(searchTerm)
 
 const getContent = async () => {
-  if ((searchTerm.value !== "")) {
-    console.log(searchTerm.value)
-    return []
+  if (searchTerm.value !== '') {
+    const result = await queryContent<ParsedContentExtension>()
+      .where({
+        _path: {
+          $in: searchResults.value.map((item) => {
+            let id = item.id
+            if (id.includes('#')) {
+              id = id.split('#')[0]
+            }
+            return id
+          })
+        }
+      })
+      .find()
+    return getUniqueListBy(result, '_path')
   }
   return await queryContent<ParsedContentExtension>().find()
 }
-const searchResults = await getContent();
 
-const queryResults = await getContent()
+function getUniqueListBy(arr: any, key: any) {
+  return [...new Map(arr.map((item: { [x: string]: any }) => [item[key], item])).values()]
+}
+
+const queryResults: Ref<ParsedContentExtension[]> = ref(await getContent())
+
+watch(searchTerm, async () => {
+  queryResults.value = await getContent()
+})
+watch(searchResults, async () => {
+  queryResults.value = await getContent()
+})
+
 const tags = (): Set<string> => {
   const foundTags: Set<string> = new Set()
   return foundTags
