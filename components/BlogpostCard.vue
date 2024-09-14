@@ -1,5 +1,7 @@
 <template>
-  <div class="bg-red-400">{{content}}</div>
+  <div class="bg-base-300 rounded-3xl">
+    <ContentRenderer class="prose" :value="content" :excerpt="true" />
+  </div>
 </template>
 
 <script setup lang="ts">

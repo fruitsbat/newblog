@@ -3,7 +3,7 @@ title: 'Hello World'
 description: 'waow'
 image_url: "ai.webp"
 image_alt: "some evil stuff"
-tags: ["helloooooo", "im here"]
+tags: ["helloooooo", "im here", "my music"]
 timestamp: 1726322707
 ---
 
@@ -12,4 +12,5 @@ timestamp: 1726322707
 Hllo eworldsd
 sdklfjksdfjkdsfj
 
+<!--more-->
 ## UNDER Confgugstruction ?!?!?!?! 👷

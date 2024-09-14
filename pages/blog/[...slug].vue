@@ -2,7 +2,6 @@
   <HeadingWithHomeButton v-if="data.title" :title="data.title" />
   <strong>{{ date() }}</strong>
   <ContentRenderer :value="data" />
-  {{ data }}
 </template>
 
 <script setup lang="ts">
