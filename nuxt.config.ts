@@ -1,22 +1,33 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ["@pinia/nuxt", "@vueuse/nuxt", "@pinia-plugin-persistedstate/nuxt"],
+
+  modules: [
+    "@pinia/nuxt",
+    "@vueuse/nuxt",
+    "@pinia-plugin-persistedstate/nuxt",
+    "@nuxt/content",
+  ],
+
   piniaPersistedstate: {
     storage: "localStorage",
   },
+
   css: ["~/assets/css/main.css"],
+
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
+
   nitro: {
     prerender: {
       routes: ["/index.xml"],
     },
   },
+
   app: {
     pageTransition: { name: "page", mode: "out-in" },
     layoutTransition: {name: "page", "mode": "out-in"},
@@ -40,4 +51,6 @@ export default defineNuxtConfig({
       ],
     },
   },
+
+  compatibilityDate: "2024-09-14",
 });
