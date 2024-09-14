@@ -32,7 +32,7 @@ import { type ParsedContentExtension } from '../scripts/parse_extension'
 const searchTerm: Ref<string> = ref('a')
 const searchResults = await searchContent(searchTerm)
 
-const getContent = async () => {
+const getContent = async (): Promise<ParsedContentExtension[]> => {
   if (searchTerm.value !== '') {
     const result = await queryContent<ParsedContentExtension>()
       .where({
@@ -47,7 +47,7 @@ const getContent = async () => {
         }
       })
       .find()
-    return getUniqueListBy(result, '_path')
+    return getUniqueListBy(result, '_path') as any
   }
   return await queryContent<ParsedContentExtension>().find()
 }
