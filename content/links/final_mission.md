@@ -1,9 +1,9 @@
 ---
-title: \"final mission!\" by avoset (remix)
+title: avoset - final mission! (zoe bat remix)
 imageURL: "finalMissionCover.webp"
 imageAlt: "a spacey looking round object in a 90s cgi style. there are lightbeams shooting from it"
-timestamp: 1720526707
-tags: ["my music", "remix", "avoset"]
+timestamp: 1719608400
+tags: ["music", "remix", "release", "drum and bass"]
 links:
     - title: "Bandcamp"
       url: "https://zoebat.bandcamp.com/album/final-mission-zoe-bat-remix"
@@ -11,6 +11,8 @@ links:
       url: "https://www.youtube.com/watch?v=PCPRODokp70&pp=ygUaZmluYWwgbWlzc2lvbiBhdm9zZXQgcmVtaXg%3D"
     - title: "Spotify"
       url: "https://open.spotify.com/track/6KJqdYwzhM3r5onhlA9KfA?si=22834b5adb4b4038"
+    - title: "Apple Music"
+      url: "https://music.apple.com/us/album/final-mission-zoe-bat-remix/1757957072?i=1757957074"
 ---
 
 a remix of avosets song final mission!

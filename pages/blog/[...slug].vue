@@ -1,6 +1,9 @@
 <template>
   <HeadingWithHomeButton v-if="data.title" :title="data.title" />
-  <strong>{{ date() }}</strong>
+  <span class="text-base-content">
+    last updated:
+    <strong>{{ date() }}</strong>
+  </span>
   <ContentRenderer :value="data" />
 </template>
 

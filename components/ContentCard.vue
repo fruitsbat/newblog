@@ -1,0 +1,56 @@
+<template>
+  <div class="flex grid-cols-3 flex-col gap-2 rounded-3xl bg-base-300 p-4 @xl:grid">
+    <NuxtLink
+      :to="mainLink()"
+      class="h-auto w-full flex-grow-0 rounded-xl @xl:h-full @xl:w-auto"
+    >
+      <img
+        loading="lazy"
+        :src="`/image/${content.imageURL}`"
+        :alt="content.imageAlt"
+        class="h-auto w-full rounded-xl object-cover @xl:h-full @6xl:w-auto"
+      />
+    </NuxtLink>
+    <div class="col-span-2 flex flex-grow-[6] flex-col items-start justify-between gap-4">
+      <div>
+        <NuxtLink :to="mainLink()" class="link text-justify font-bold text-xl">
+          <h2>{{ content.title }}</h2>
+        </NuxtLink>
+        <ContentRenderer class="f" :value="content" :excerpt="true" />
+      </div>
+      <div class="flex w-full flex-wrap gap-2" v-if="hasLinksField()">
+        <NuxtLink
+          v-for="l in content.links!"
+          class="btn flex-grow rounded-xl"
+          :key="l.url"
+          :to="l.url"
+          >{{ l.title }}</NuxtLink
+        >
+      </div>
+      <NuxtLink v-else class="btn w-full rounded-xl" :to="content._path">read more...</NuxtLink>
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { type ParsedContentExtension } from '../scripts/parse_extension'
+import { type PropType } from 'vue'
+
+const props = defineProps({
+  content: {
+    type: Object as PropType<ParsedContentExtension>,
+    required: true
+  }
+})
+
+const hasLinksField = () => {
+  return props.content.links !== undefined && props.content.links.length > 0
+}
+
+const mainLink = (): string => {
+  if (hasLinksField()) {
+    return props.content.links![0].url
+  }
+  return props.content._path!
+}
+</script>

@@ -14,7 +14,7 @@ export default defineNuxtConfig({
       search: {
         indexed: true,
       },
-    }
+    },
   },
 
   piniaPersistedstate: {
@@ -38,7 +38,7 @@ export default defineNuxtConfig({
 
   app: {
     pageTransition: { name: "page", mode: "out-in" },
-    layoutTransition: {name: "page", "mode": "out-in"},
+    layoutTransition: { name: "page", mode: "out-in" },
     head: {
       htmlAttrs: {
         lang: "en",
@@ -50,6 +50,16 @@ export default defineNuxtConfig({
           rel: "alternate",
           type: "application/rss+xml",
           href: "/index.xml",
+        },
+        {
+          rel: "alternate",
+          type: "application/atom+xml",
+          href: "/atom.xml",
+        },
+        {
+          rel: "alternate",
+          type: "application/feed+json",
+          href: "/index.json",
         },
         {
           rel: "icon",
