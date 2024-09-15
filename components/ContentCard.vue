@@ -13,10 +13,14 @@
     </NuxtLink>
     <div class="col-span-2 flex flex-grow-[6] flex-col items-start justify-between gap-4">
       <div>
-        <NuxtLink :to="mainLink()" class="link text-justify font-bold text-xl">
-          <h2>{{ content.title }}</h2>
+        <NuxtLink :to="mainLink()" class="link text-justify ">
+          <h2 class="font-bold text-2xl">{{ content.title }}</h2>
+          <span class="text-sm">last updated: <bold class="font-bold">{{ date() }}</bold></span>
         </NuxtLink>
-        <ContentRenderer class="f" :value="content" :excerpt="true" />
+        <br>
+        <br>
+        <span v-if="content.description">{{content.description}}</span>
+        <ContentRenderer v-else class="f" :value="content" :excerpt="true" />
       </div>
       <div class="flex w-full flex-wrap gap-2" v-if="hasLinksField()">
         <NuxtLink
@@ -53,4 +57,13 @@ const mainLink = (): string => {
   }
   return props.content._path!
 }
+
+const date = (): string => {
+  return new Date(props.content.timestamp * 1000).toLocaleString("en-US", {
+    year: "numeric",
+    day: "2-digit",
+    month: "long",
+    timeZone: "Europe/Berlin",
+  });
+};
 </script>

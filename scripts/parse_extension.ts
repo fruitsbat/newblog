@@ -6,4 +6,5 @@ export interface ParsedContentExtension extends ParsedContent {
   tags: Array<string>;
   timestamp: number;
   links: Array<{title: string, url: string}> | undefined;
+  description: string | undefined;
 }

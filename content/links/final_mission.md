@@ -15,5 +15,5 @@ links:
       url: "https://music.apple.com/us/album/final-mission-zoe-bat-remix/1757957072?i=1757957074"
 ---
 
-a remix of avosets song final mission!
+A remix of avosets song final mission!
 <!--more-->

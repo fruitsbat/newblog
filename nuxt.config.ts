@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  ssr: false,
   devtools: { enabled: true },
 
   modules: [
@@ -11,6 +12,7 @@ export default defineNuxtConfig({
 
   content: {
     experimental: {
+      clientDB: true,
       search: {
         indexed: true,
       },
@@ -32,7 +34,7 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: {
-      routes: ["/index.xml"],
+      routes: ["/index.xml", "/index.json", "/atom.xml"],
     },
   },
 

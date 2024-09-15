@@ -80,6 +80,7 @@ async function getContent(): Promise<Array<ParsedContentExtension>> {
   }
   return await queryContent<ParsedContentExtension>()
     .where({ tags: { $contains: selectedTags.value } })
+    .sort({timestamp: -1})
     .find()
 }
 

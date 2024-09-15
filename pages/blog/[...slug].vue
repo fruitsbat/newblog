@@ -1,10 +1,14 @@
 <template>
-  <HeadingWithHomeButton v-if="data.title" :title="data.title" />
-  <span class="text-base-content">
-    last updated:
-    <strong>{{ date() }}</strong>
-  </span>
-  <ContentRenderer :value="data" />
+  <div class="flex flex-col w-full justify-center items-center">
+    <div class="pb-6">
+      <HeadingWithHomeButton v-if="data.title" :title="data.title" />
+      <span class="pl-12 indent-4 text-lg">
+        last updated:
+        <strong class="font-bold">{{ date() }}</strong>
+      </span>
+    </div>
+    <ContentRenderer class="max-w-2xl" :value="data" />
+  </div>
 </template>
 
 <script setup lang="ts">
