@@ -1,8 +1,8 @@
 <template>
-  <div class="flex grid-cols-3 flex-col gap-2 rounded-3xl bg-base-300 p-4 @xl:grid">
+  <div class="flex grid-cols-7 flex-col gap-2 rounded-3xl bg-base-300 p-4 @xl:grid">
     <NuxtLink
       :to="mainLink()"
-      class="h-auto w-full flex-grow-0 rounded-xl @xl:h-full @xl:w-auto"
+      class="h-auto w-full flex-grow-0 rounded-xl @xl:h-full @xl:w-auto col-span-2"
     >
       <img
         loading="lazy"
@@ -11,7 +11,7 @@
         class="h-auto w-full rounded-xl object-cover @xl:h-full @6xl:w-auto"
       />
     </NuxtLink>
-    <div class="col-span-2 flex flex-grow-[6] flex-col items-start justify-between gap-4">
+    <div class="col-span-5 flex flex-grow-[6] flex-col items-start justify-between gap-4">
       <div>
         <NuxtLink :to="mainLink()" class="link text-justify ">
           <h2 class="font-bold text-2xl">{{ content.title }}</h2>
