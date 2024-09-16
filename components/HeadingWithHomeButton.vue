@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-row justify-start items-center gap-4">
     <HomeButton />
-    <h1 class="m-0">{{ title }}</h1>
+    <h1 class="m-0 text-6xl font-bold">{{ title }}</h1>
   </div>
 </template>
 

@@ -1,25 +1,46 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  ssr: false,
   devtools: { enabled: true },
-  modules: ["@pinia/nuxt", "@vueuse/nuxt", "@pinia-plugin-persistedstate/nuxt"],
+
+  modules: [
+    "@pinia/nuxt",
+    "@vueuse/nuxt",
+    "@pinia-plugin-persistedstate/nuxt",
+    "@nuxt/content",
+  ],
+
+  content: {
+    experimental: {
+      clientDB: true,
+      search: {
+        indexed: true,
+      },
+    },
+  },
+
   piniaPersistedstate: {
     storage: "localStorage",
   },
+
   css: ["~/assets/css/main.css"],
+
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
+
   nitro: {
     prerender: {
-      routes: ["/index.xml"],
+      routes: ["/index.xml", "/index.json", "/atom.xml"],
     },
   },
+
   app: {
     pageTransition: { name: "page", mode: "out-in" },
-    layoutTransition: {name: "page", "mode": "out-in"},
+    layoutTransition: { name: "page", mode: "out-in" },
     head: {
       htmlAttrs: {
         lang: "en",
@@ -33,6 +54,16 @@ export default defineNuxtConfig({
           href: "/index.xml",
         },
         {
+          rel: "alternate",
+          type: "application/atom+xml",
+          href: "/atom.xml",
+        },
+        {
+          rel: "alternate",
+          type: "application/feed+json",
+          href: "/index.json",
+        },
+        {
           rel: "icon",
           type: "image/x-icon",
           href: "/favicon.svg",
@@ -40,4 +71,6 @@ export default defineNuxtConfig({
       ],
     },
   },
+
+  compatibilityDate: "2024-09-14",
 });
