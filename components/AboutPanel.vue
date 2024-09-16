@@ -22,6 +22,7 @@
             >!
           </p>
         </div>
+        <LastFM />
         <ThemeSwitcher class="" />
         <SocialLinks />
       </div>
