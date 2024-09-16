@@ -3,7 +3,7 @@ title: space kitty
 imageURL: spaceKitty.webp
 imageAlt: "a cat in space"
 timestamp: 1632171600
-tags: ["web"]
+tags: ["web", "art"]
 links:
     - title: "tilde.team"
       url: https://tilde.team/~zoe/

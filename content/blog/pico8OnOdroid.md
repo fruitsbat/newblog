@@ -2,11 +2,11 @@
 title: run pico 8 on odroid go ultra
 imageURL: "pico8Odroid.webp"
 imageAlt: "an odroid showing blinking lights"
-tags: ["video games", "guide"]
+tags: ["gaming", "guide"]
 timestamp: 1687640400
 ---
 
-Ever wanted to know how to get pico 8 running on an Odroid Go Ultra.
+Ever wanted to know how to get pico 8 running on an Odroid Go Ultra?
 <!--more-->
 
 first buy pico 8

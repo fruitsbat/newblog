@@ -1,9 +1,9 @@
 ---
-title: Trainyard Trouble
+title: trainyard trouble
 imageURL: trainyardTrouble.webp
 imageAlt: "a pixel art steam train driving"
 timestamp: 1650920400
-tags: ["video games", "release"]
+tags: ["gaming"]
 links:
     - title: "itch.io"
       url: https://bathearttiger.itch.io/trainyard-trouble
