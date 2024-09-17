@@ -4,7 +4,7 @@ import Showdown from "showdown";
 import { readFile } from "fs/promises";
 import { join } from "path"
 
-const BASE_URL = "https://zoe.kittycat.homes/";
+const BASE_URL = "https://zoe.kittycat.homes";
 
 async function markdownFromFile(fname: string): Promise<string> {
   const converter = new Showdown.Converter();
@@ -47,7 +47,7 @@ export async function getFeed(): Promise<Feed> {
         }
         return BASE_URL + contentItem._path!;
       })(),
-      image: BASE_URL + "image/" + contentItem.imageURL,
+      image: BASE_URL + "/image/" + contentItem.imageURL,
       description: await markdownFromFile(contentItem._file!)
     });
   }
