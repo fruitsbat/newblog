@@ -28,7 +28,7 @@ export async function getFeed(): Promise<Feed> {
     description: "a feed for all my projects and ramblings 💚🦇",
     link: BASE_URL,
     author: { name: "fruitbat", link: BASE_URL },
-    favicon: BASE_URL + "favicon.svg",
+    favicon: BASE_URL + "/favicon.svg",
     language: "en",
   });
   const content: Array<ParsedContentExtension> = (
