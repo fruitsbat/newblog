@@ -11,4 +11,5 @@ Things that i think are cool from all over the internet!
 
 ![funny wires](https://zoe.kittycat.homes/image/ai.webp)
 
-## [Sortition Social](https://suricrasia.online/sortition/)
+## Sortition Social
+https://suricrasia.online/sortition/
