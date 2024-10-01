@@ -2,7 +2,7 @@ import { Feed } from "feed";
 import type { ParsedContentExtension } from "./parse_extension";
 import Showdown from "showdown";
 import { readFile } from "fs/promises";
-import { join } from "path"
+import { join } from "path";
 
 const BASE_URL = "https://zoe.kittycat.homes";
 
@@ -37,7 +37,7 @@ export async function getFeed(): Promise<Feed> {
     return b.timestamp - a.timestamp;
   });
   for (const contentItem of content) {
-      feed.addItem({
+    feed.addItem({
       title: contentItem.title ?? "no title",
       date: new Date(contentItem.timestamp * 1000),
       link: (() => {
@@ -48,7 +48,10 @@ export async function getFeed(): Promise<Feed> {
         return BASE_URL + contentItem._path!;
       })(),
       image: BASE_URL + "/image/" + contentItem.imageURL,
-      description: await markdownFromFile(contentItem._file!)
+      description: await markdownFromFile(contentItem._file!),
+      category: contentItem.tags.map((item) => {
+        return { domain: "zoe.kittycat.homes", term: item, name: item };
+      }),
     });
   }
   return feed;
