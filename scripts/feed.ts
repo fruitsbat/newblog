@@ -54,13 +54,5 @@ export async function getFeed(): Promise<Feed> {
       }),
     });
   }
-  for (const doc of content) {
-    let content = "";
-    if (doc.image != undefined) {
-      content =
-        content +
-        `<img src='https://zoe.kittycat.homes${doc.image}' alt='${doc.image_description}' />`;
-    }
-  }
   return feed;
 }
