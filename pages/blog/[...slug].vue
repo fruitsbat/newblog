@@ -8,7 +8,7 @@
       </span>
     </div>
     <ContentRenderer class="max-w-2xl" :value="data" />
-    <CommentForm :slug="useRoute().params.slug as string" />
+    <CommentForm class="pt-12" :slug="useRoute().params.slug as string" />
     <NuxtLink
       to="/"
       class="toast flex toast-end btn btn-neutral m-6 p-4 rounded-3xl flex-row items-center justify-center shadow-2xl"
@@ -20,7 +20,7 @@
 </template>
 
 <script setup lang="ts">
-import { HomeIcon, EnvelopeIcon } from "@heroicons/vue/24/solid";
+import { HomeIcon } from "@heroicons/vue/24/solid";
 import { type ParsedContentExtension } from "~/scripts/parse_extension";
 const data = await queryContent<ParsedContentExtension>(
   useRoute().path,
