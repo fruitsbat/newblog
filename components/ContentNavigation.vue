@@ -60,6 +60,7 @@ const allTags = computed((): Map<string, number> => {
 async function getContent(): Promise<Array<ParsedContentExtension>> {
   if (searchTerm.value !== '') {
     const result = await queryContent<ParsedContentExtension>()
+      .where({ tags: { $exists: true } })
       .where({
         tags: {
           $contains: selectedTags.value
@@ -79,8 +80,9 @@ async function getContent(): Promise<Array<ParsedContentExtension>> {
     return getUniqueListBy(result, '_path') as any
   }
   return await queryContent<ParsedContentExtension>()
+    .where({ tags: { $exists: true } })
     .where({ tags: { $contains: selectedTags.value } })
-    .sort({timestamp: -1})
+    .sort({ timestamp: -1 })
     .find()
 }
 
