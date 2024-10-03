@@ -23,6 +23,7 @@
     "@vueuse/core": "^11.0.3",
     "@vueuse/nuxt": "^11.0.3",
     "autoprefixer": "^10.4.16",
+    "axios": "^1.7.7",
     "daisyui": "^4.4.19",
     "feed": "^4.2.2",
     "nuxt": "^3",
