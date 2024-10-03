@@ -8,7 +8,7 @@
       </span>
     </div>
     <ContentRenderer class="max-w-2xl" :value="data" />
-    <CommentForm :slug="path.slice(1)" />
+    <CommentForm :slug="useRoute().params.slug as string" />
     <NuxtLink
       to="/"
       class="toast flex toast-end btn btn-neutral m-6 p-4 rounded-3xl flex-row items-center justify-center shadow-2xl"
@@ -22,9 +22,8 @@
 <script setup lang="ts">
 import { HomeIcon, EnvelopeIcon } from "@heroicons/vue/24/solid";
 import { type ParsedContentExtension } from "~/scripts/parse_extension";
-const path = useRoute().path
 const data = await queryContent<ParsedContentExtension>(
-  path
+  useRoute().path,
 ).findOne();
 definePageMeta({
   layout: "blogpost",
