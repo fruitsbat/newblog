@@ -2,6 +2,8 @@
 title: WEBSITE TAKEOVER
 tags: ["EVIL"]
 timestamp: 1727902421
+imageURL: "kbity.webp"
+imageAlt: "a kitty looking"
 ---
 
 meow meow meow meow
