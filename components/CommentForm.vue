@@ -1,5 +1,5 @@
 <template>
-  <form v-if="showCommentForm" @submit.prevent="submitComment" class="flex flex-col gap-2">
+  <form @submit.prevent="submitComment" class="flex flex-col gap-2">
     <input
       v-model="comment.name"
       type="text"
@@ -52,12 +52,6 @@ const comment = ref({
   website: '',
   body: ''
 })
-
-const showCommentForm = ref(false)
-
-function toggleCommentForm() {
-  showCommentForm.value = !showCommentForm.value
-}
 
 function submitComment() {
   const formData = new URLSearchParams()

@@ -8,13 +8,7 @@
       </span>
     </div>
     <ContentRenderer class="max-w-2xl" :value="data" />
-    <a
-      class="btn btn-neutral flex flex-row w-full max-w-2xl"
-      :href="`mailto:zoe@kittycat.homes?subject=re: ${data.title}`"
-    >
-      <EnvelopeIcon class="w-4 h-4"/>
-      <span>reply</span>
-    </a>
+    <CommentForm :slug="path.slice(1)" />
     <NuxtLink
       to="/"
       class="toast flex toast-end btn btn-neutral m-6 p-4 rounded-3xl flex-row items-center justify-center shadow-2xl"
@@ -28,9 +22,9 @@
 <script setup lang="ts">
 import { HomeIcon, EnvelopeIcon } from "@heroicons/vue/24/solid";
 import { type ParsedContentExtension } from "~/scripts/parse_extension";
-
+const path = useRoute().path
 const data = await queryContent<ParsedContentExtension>(
-  useRoute().path
+  path
 ).findOne();
 definePageMeta({
   layout: "blogpost",
