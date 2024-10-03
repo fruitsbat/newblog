@@ -33,9 +33,13 @@ export async function getFeed(): Promise<Feed> {
   });
   const content: Array<ParsedContentExtension> = (
     (await $fetch("/api/_content/query")) as Array<ParsedContentExtension>
-  ).sort((a, b) => {
-    return b.timestamp - a.timestamp;
-  });
+  )
+    .filter((item) => {
+      return item.tags;
+    })
+    .sort((a, b) => {
+      return b.timestamp - a.timestamp;
+    });
   for (const contentItem of content) {
     feed.addItem({
       title: contentItem.title ?? "no title",
