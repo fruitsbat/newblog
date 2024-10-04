@@ -15,7 +15,7 @@
       <div>
         <NuxtLink :to="mainLink()" class="link text-justify ">
           <h2 class="font-bold text-2xl">{{ content.title }}</h2>
-          <span class="text-sm">last updated: <bold class="font-bold">{{ date() }}</bold></span>
+          <span class="text-sm">last updated: <strong class="font-bold">{{ date() }}</strong></span>
         </NuxtLink>
         <br>
         <br>

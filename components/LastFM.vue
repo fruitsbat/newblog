@@ -36,30 +36,15 @@
   
   <script setup lang="ts">
   import { useFetch } from "#app";
-  import { ref, onMounted, onBeforeUnmount } from "vue";
+  import { ref } from "vue";
   import { MusicalNoteIcon } from "@heroicons/vue/24/solid";
   
   const show = ref(false);
   
-  const { data: track, refresh } = await useFetch<{
+  const { data: track } = await useFetch<{
     name: string;
     artist: string;
     album: string;
     image: string;
   }>("https://nowplaying.kittycat.homes/zoe");
-  
-  async function get_song() {
-    await refresh();
-    show.value = true;
-  }
-  
-  onMounted(() => {
-    setTimeout(get_song, 50);
-  
-    const intervalId = setInterval(get_song, 30000);
-  
-    onBeforeUnmount(() => {
-      clearInterval(intervalId);
-    });
-  });
   </script>
