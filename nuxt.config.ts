@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  ssr: true,
+  ssr: false,
   devtools: { enabled: true },
 
   modules: [
@@ -12,7 +12,7 @@ export default defineNuxtConfig({
 
   content: {
     experimental: {
-      clientDB: false,
+      clientDB: true,
       search: {
         indexed: true,
       },
