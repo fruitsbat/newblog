@@ -30,6 +30,7 @@
         <ContactDetails class="text-primary-content @3xl:col-span-2" />
         <div class="row-span-3 flex h-full flex-col items-center justify-center @3xl:col-span-2">
           <img
+            title="physical form!"
             class="h-auto w-full"
             src="/image/me.webp"
             alt="a pixelart image of a person with messy brown hair wearing a black dress. there's an arrow pointing at it that says 'me'"
