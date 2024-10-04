@@ -41,10 +41,16 @@
   
   const show = ref(false);
   
-  const { data: track } = await useFetch<{
+  const { data: track, refresh } = await useFetch<{
     name: string;
     artist: string;
     album: string;
     image: string;
   }>("https://nowplaying.kittycat.homes/zoe");
+
+  await refresh().then(
+    () => {
+      show.value = true
+    }
+  )
   </script>
