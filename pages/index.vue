@@ -18,8 +18,8 @@ Right now i study software engineering at university,
 but spend a lot of my free time making music and generally being interested in way too many things!
 Welcome to my blog :3`;
 useSeoMeta({
-  title: "fruitbat website",
-  ogTitle: "fruitbat website",
+  title: title,
+  ogTitle: title,
   description: description,
   ogDescription: description,
   ogImage: "/favicon.svg",
