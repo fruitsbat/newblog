@@ -19,10 +19,12 @@
       ></CommentDisplay>
     </div>
     <NuxtLink
+      @click="loadingHome = true"
       to="/"
       class="toast flex toast-end btn btn-neutral m-6 p-4 rounded-3xl flex-row items-center justify-center shadow-2xl"
     >
-      <HomeIcon class="h-4 w-4" />
+      <div v-if="loadingHome" class="h-4 w-4 loading loading-ring"></div>
+      <HomeIcon v-else class="h-4 w-4" />
       <span>Home</span>
     </NuxtLink>
   </div>
@@ -34,6 +36,8 @@ import {
   type ParsedContentExtension,
   type CommentExtension,
 } from "~/scripts/parse_extension";
+
+const loadingHome = ref(false)
 
 const data = await queryContent<ParsedContentExtension>(
   useRoute().path
