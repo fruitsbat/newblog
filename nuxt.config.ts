@@ -3,6 +3,11 @@ export default defineNuxtConfig({
   ssr: false,
   devtools: { enabled: true },
 
+  routeRules: {
+    "/": { ssr: false },
+    "/blog/**": { ssr: true },
+  },
+
   modules: [
     "@pinia/nuxt",
     "@vueuse/nuxt",
