@@ -12,7 +12,7 @@ export default defineNuxtConfig({
 
   content: {
     experimental: {
-      clientDB: true,
+      clientDB: false,
       search: {
         indexed: true,
       },
