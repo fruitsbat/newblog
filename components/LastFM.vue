@@ -48,7 +48,7 @@
     image: string;
   }>("https://nowplaying.kittycat.homes/zoe");
 
-  await refresh().then(
+  refresh().then(
     () => {
       show.value = true
     }
