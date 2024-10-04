@@ -60,7 +60,7 @@ const date = (): string => {
 };
 
 const comments = await queryContent<CommentExtension>(`/comments/${slug.value}`)
-  .sort({ timestamp: 1 })
+  .sort({ timestamp: -1 })
   .where({ reply: { $exists: false } })
   .find();
 </script>
