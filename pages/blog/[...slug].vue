@@ -37,7 +37,7 @@ import {
   type CommentExtension,
 } from "~/scripts/parse_extension";
 
-const loadingHome = ref(false)
+const loadingHome = ref(false);
 
 const data = await queryContent<ParsedContentExtension>(
   useRoute().path
@@ -63,4 +63,16 @@ const comments = await queryContent<CommentExtension>(`/comments/${slug.value}`)
   .sort({ timestamp: -1 })
   .where({ reply: { $exists: false } })
   .find();
+
+useSeoMeta({
+  title: data.title,
+  ogTitle: data.title,
+  description: data.description,
+  ogDescription: data.description,
+  ogImage: data.image? data.image.url : undefined,
+  twitterTitle: data.title,
+  twitterDescription: data.description,
+  twitterImage: data.image? data.image.url : undefined,
+  twitterImageAlt: data.image? data.image.alt : undefined,
+});
 </script>
