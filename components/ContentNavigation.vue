@@ -1,7 +1,7 @@
 <template>
-  <div class="flex h-full min-h-screen flex-col gap-4 rounded-3xl bg-base-200 @container">
+  <div class="flex h-full min-h-screen flex-col gap-4 rounded-3xl bg-neutral @container">
     <!-- search bar -->
-    <div class="flex flex-col gap-4 rounded-2xl bg-base-300 p-4">
+    <div class="flex flex-col gap-4 p-4 rounded-2xl bg-neutral text-neutral-content">
       <label for="contentSearchBar" class="flex gap-2">
         <MagnifyingGlassIcon class="h-6" />
         <span>search</span>
@@ -10,7 +10,7 @@
         v-model="searchTerm"
         id="contentSearchBar"
         type="search"
-        class="h-full min-h-10 w-full rounded-xl bg-base-300 px-4 outline outline-2 outline-primary"
+        class="h-full min-h-10 w-full bg-neutral rounded-xl px-4 outline outline-2 outline-primary"
       />
       <TransitionGroup class="flex gap-2 overflow-x-auto min-h-12" name="list" tag="ul">
         <button

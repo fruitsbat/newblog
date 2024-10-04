@@ -1,7 +1,8 @@
 ---
 title: hello (again) world
-imageURL: "goodbyeCohost.webp"
-imageAlt: "me pulling a hat with eggbug on it all the way in my face"
+image:
+    url: "goodbyeCohost.webp"
+    alt: "me pulling a hat with eggbug on it all the way in my face"
 tags: ["thought", "web"]
 timestamp: 1726414965
 ---

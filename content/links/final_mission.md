@@ -1,7 +1,8 @@
 ---
 title: avoset - final mission! (zoe bat remix)
-imageURL: "finalMissionCover.webp"
-imageAlt: "a spacey looking round object in a 90s cgi style. there are lightbeams shooting from it"
+image:
+  url: "finalMissionCover.webp"
+  alt: "a spacey looking round object in a 90s cgi style. there are lightbeams shooting from it"
 timestamp: 1719608400
 tags: ["music", "remix", "release", "drum and bass"]
 links:

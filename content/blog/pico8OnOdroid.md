@@ -1,7 +1,5 @@
 ---
 title: run pico 8 on odroid go ultra
-imageURL: "pico8Odroid.webp"
-imageAlt: "an odroid showing blinking lights"
 tags: ["gaming", "guide"]
 timestamp: 1687640400
 ---
