@@ -64,7 +64,7 @@ const comments = await queryContent<CommentExtension>(`/comments/${slug.value}`)
   .where({ reply: { $exists: false } })
   .find();
 
-useSeoMeta({
+useServerSeoMeta({
   title: data.title,
   ogTitle: data.title,
   description: data.description,

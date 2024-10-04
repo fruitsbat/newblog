@@ -25,22 +25,6 @@ const { active } = storeToRefs(store);
 watch(active, () => {
   console.log(`theme: ${active.value}`);
 });
-const title = "fruitbat moment" as const;
-const description = `Hi! I'm zoe! 
-Right now i study software engineering at university, 
-but spend a lot of my free time making music and generally being interested in way too many things!
-Welcome to my blog :3`;
-useSeoMeta({
-  title: title,
-  ogTitle: title,
-  description: description,
-  ogDescription: description,
-  ogImage: "/favicon.svg",
-  twitterTitle: title,
-  twitterDescription: description,
-  twitterImage: "/favicon.svg",
-  twitterImageAlt: "an emoji of a bat! it has a funny nose :)"
-});
 </script>
 
 <style>
