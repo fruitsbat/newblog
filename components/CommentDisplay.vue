@@ -1,14 +1,22 @@
 <template>
-  <div class="bg-base-200 p-6 rounded-lg">
+  <div class="rounded-lg bg-base-200 p-6">
     <a class="link" v-if="comment.website" :href="comment.website"
-      ><h2 class="text-xl font-black flex flex-col">
+      ><h2 class="flex flex-row items-center gap-2 flex-wrap text-xl font-black">
         <span>{{ comment.name }}</span>
-        <small>{{ date() }}</small>
+        <span class="text-sm font-light">
+        <ClientOnly>
+          <small class="font-bold">wrote on {{ date() }}:</small>
+        </ClientOnly>
+      </span>
       </h2></a
     >
-    <h2 class="text-xl font-black flex flex-col" v-else>
+    <h2 class="flex flex-row items-center gap-2 flex-wrap text-xl font-black" v-else>
       <span>{{ comment.name }}</span>
-      <small>{{ date() }}</small>
+      <span class="text-sm font-light">
+        <ClientOnly>
+          <small class="font-bold">wrote on {{ date() }}:</small>
+        </ClientOnly>
+      </span>
     </h2>
     <ContentRenderer :value="comment"></ContentRenderer>
   </div>
@@ -27,8 +35,7 @@ const date = (): string => {
     month: 'long',
     hour: 'numeric',
     minute: 'numeric',
-    hour12: false,
-    timeZone: 'Europe/Berlin'
+    hour12: false
   })
 }
 </script>
