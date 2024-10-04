@@ -12,7 +12,7 @@
         type="search"
         class="h-full min-h-10 w-full rounded-xl bg-base-300 px-4 outline outline-2 outline-primary"
       />
-      <TransitionGroup class="flex flex-wrap gap-2" name="list" tag="ul">
+      <TransitionGroup class="flex gap-2 overflow-x-auto min-h-12" name="list" tag="ul">
         <button
           v-for="tag in allTags"
           :key="tag[0]"
