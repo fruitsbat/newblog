@@ -13,6 +13,7 @@
           </h3>
           <div class="flex flex-col gap-4">
             <img
+              loading="lazy"
               class="rounded-xl"
               v-if="
                 track.image &&
