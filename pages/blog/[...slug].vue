@@ -1,15 +1,15 @@
 <template>
   <div class="flex flex-col w-full justify-center items-center gap-6">
-    <div>
+    <article class="h-entry">
       <div class="pb-6">
-        <h1 class="font-black text-7xl text-center">{{ data.title }}</h1>
+        <h1 class="font-black text-7xl text-center p-name">{{ data.title }}</h1>
         <span class="md:pl-12 indent-4 text-lg text-center">
           last updated:
-          <strong class="font-bold">{{ date() }}</strong>
+          <time class="font-bold dt-updated">{{ date() }}</time>
         </span>
       </div>
-      <ContentRenderer class="max-w-2xl" :value="data" />
-    </div>
+      <ContentRenderer class="max-w-2xl e-content" :value="data" />
+    </article>
     <CommentForm :slug="slug"></CommentForm>
     <div class="flex flex-col w-full gap-4 max-w-2xl">
       <CommentDisplay
@@ -27,8 +27,6 @@ import {
   type ParsedContentExtension,
   type CommentExtension,
 } from "~/scripts/parse_extension";
-
-const loadingHome = ref(false);
 
 const data = await queryContent<ParsedContentExtension>(
   useRoute().path
