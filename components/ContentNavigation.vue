@@ -40,31 +40,14 @@ const postsWithMatchingTags = computed(() => {
     return queryResults
   }
   return queryResults.filter((post) => {
-    for (const posttag of post.tags) {
-      if (selectedTags.value.includes(posttag)) {
-        return true
+    // check if this post has every selected tag
+    for (const selectedTag of selectedTags.value) {
+      if (!post.tags.includes(selectedTag)) {
+        return false;
       }
     }
-    return false
+    return true;
   })
-})
-
-const allTags = computed((): Map<string, number> => {
-  let foundTags: Map<string, number> = new Map()
-  queryResults.forEach((contentItem) => {
-    contentItem.tags.forEach((tag) => {
-      // put tag in the map if its not already there
-      if (foundTags.get(tag) === undefined) {
-        foundTags.set(tag, 1)
-      } else {
-        foundTags.set(tag, foundTags.get(tag)! + 1)
-      }
-    })
-  })
-  // sort the map so that the tags are sorted by how often they appear
-  // (descending)
-  foundTags = new Map([...foundTags].sort((a, b) => b[1] - a[1]))
-  return foundTags
 })
 
 async function toggleTagSelection(tag: string) {
