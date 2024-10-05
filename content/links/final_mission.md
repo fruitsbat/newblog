@@ -4,7 +4,7 @@ image:
   url: "finalMissionCover.webp"
   alt: "a spacey looking round object in a 90s cgi style. there are lightbeams shooting from it"
 timestamp: 1719608400
-tags: ["music", "remix", "release", "drum and bass"]
+tags: ["music", "remix", "release", "drum and bass", "avoset", "single"]
 links:
     - title: "Bandcamp"
       url: "https://zoebat.bandcamp.com/album/final-mission-zoe-bat-remix"
