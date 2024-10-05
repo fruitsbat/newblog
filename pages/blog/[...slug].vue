@@ -18,20 +18,12 @@
         :path="slug"
       ></CommentDisplay>
     </div>
-    <NuxtLink
-      @click="loadingHome = true"
-      to="/"
-      class="toast flex toast-end btn btn-neutral m-6 p-4 rounded-3xl flex-row items-center justify-center shadow-2xl"
-    >
-      <div v-if="loadingHome" class="h-4 w-4 loading loading-ring"></div>
-      <HomeIcon v-else class="h-4 w-4" />
-      <span>Home</span>
-    </NuxtLink>
+    <FloatingHomeButton />
   </div>
 </template>
 
 <script setup lang="ts">
-import { HomeIcon } from "@heroicons/vue/24/solid";
+
 import {
   type ParsedContentExtension,
   type CommentExtension,

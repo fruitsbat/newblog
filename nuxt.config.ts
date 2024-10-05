@@ -1,12 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  ssr: false,
+  ssr: true,
   devtools: { enabled: true },
-
-  routeRules: {
-    "/": { ssr: false },
-    "/blog/**": { ssr: true },
-  },
 
   modules: [
     "@pinia/nuxt",
@@ -15,14 +10,7 @@ export default defineNuxtConfig({
     "@nuxt/content",
   ],
 
-  content: {
-    experimental: {
-      clientDB: true,
-      search: {
-        indexed: true,
-      },
-    },
-  },
+  content: {},
 
   piniaPersistedstate: {
     storage: "localStorage",

@@ -2,9 +2,7 @@
   <div>
     <HomeHeading class="min-h-screen" />
     <div class="grid xl:grid-cols-5 gap-4 p-8">
-      <Suspense>
-        <ContentNavigation class="xl:col-span-3 drop-shadow-md" />
-      </Suspense>
+      <ContentNavigation class="xl:col-span-3 drop-shadow-md" />
       <AboutPanel class="xl:col-span-2 drop-shadow-md" />
     </div>
   </div>
@@ -26,6 +24,6 @@ useSeoMeta({
   twitterTitle: title,
   twitterDescription: description,
   twitterImage: "/favicon.svg",
-  twitterImageAlt: "an emoji of a bat! it has a funny nose :)"
+  twitterImageAlt: "an emoji of a bat! it has a funny nose :)",
 });
 </script>
