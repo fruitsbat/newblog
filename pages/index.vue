@@ -10,20 +10,27 @@
 
 <script setup lang="ts">
 import ContentNavigation from "~/components/ContentNavigation.vue";
-const title = "fruitbat moment" as const;
+const title = "fruitbat's blog" as const;
 const description = `Hi! I'm zoe! 
 Right now i study software engineering at university, 
 but spend a lot of my free time making music and generally being interested in way too many things!
 Welcome to my blog :3`;
+const icon = "https://zoe.kittycat.homes/favicon.svg";
+const iconAlt = "A bat with a funny nose! But its not a fruitbat";
 useSeoMeta({
   title: title,
   ogTitle: title,
   description: description,
   ogDescription: description,
-  ogImage: "/favicon.svg",
+  ogUrl: `https://zoe.kittycat.homes/`,
+  ogSiteName: "fruitbat's blog",
+  ogType: "profile",
+  profileGender: "she/they",
+  ogImage: icon,
+  ogImageAlt: iconAlt,
   twitterTitle: title,
   twitterDescription: description,
-  twitterImage: "/favicon.svg",
-  twitterImageAlt: "an emoji of a bat! it has a funny nose :)",
+  twitterImage: icon,
+  twitterImageAlt: iconAlt,
 });
 </script>

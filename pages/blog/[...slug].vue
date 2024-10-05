@@ -23,7 +23,6 @@
 </template>
 
 <script setup lang="ts">
-
 import {
   type ParsedContentExtension,
   type CommentExtension,
@@ -56,15 +55,30 @@ const comments = await queryContent<CommentExtension>(`/comments/${slug.value}`)
   .where({ reply: { $exists: false } })
   .find();
 
+const imageData = computed(() => {
+  return data.image
+    ? {
+        url: `https://zoe.kittycat.homes/image/${data.image.url}`,
+        alt: data.image.alt,
+      }
+    : { url: undefined, alt: undefined };
+});
+
 useSeoMeta({
   title: data.title,
   ogTitle: data.title,
   description: data.description,
   ogDescription: data.description,
-  ogImage: data.image? data.image.url : undefined,
+  articleTag: data.tags,
+  ogUrl: `https://zoe.kittycat.homes${data._path}`,
+  ogSiteName: "fruitbat's blog",
+  ogType: "article",
+  profileGender: "she/they",
+  ogImage: imageData.value.url,
+  ogImageAlt: imageData.value.alt,
   twitterTitle: data.title,
   twitterDescription: data.description,
-  twitterImage: data.image? data.image.url : undefined,
-  twitterImageAlt: data.image? data.image.alt : undefined,
+  twitterImage: imageData.value.url,
+  twitterImageAlt: imageData.value.alt,
 });
 </script>
