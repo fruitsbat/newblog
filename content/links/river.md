@@ -4,7 +4,7 @@ image:
   url: "riverCover.webp"
   alt: "some abstract shapes resembling river water under a microscope"
 timestamp: 1715288400
-tags: ["music", "drum and bass", "release"]
+tags: ["music", "drum and bass", "release", "jungle", "ep"]
 links:
     - title: "Bandcamp"
       url: "https://zoebat.bandcamp.com/album/final-mission-zoe-bat-remix"
