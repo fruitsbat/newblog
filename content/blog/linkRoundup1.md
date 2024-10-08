@@ -14,7 +14,7 @@ Hey i heard you like syndication so i put some syndication in your syndication.
 You can also sign up to this if you feel like it 🤫
 
 ## garage hearts
-Looove [this ep](https://b-trx.bandcamp.com/album/garage-hearts), got it suuuper late honestly. Last bandcamp friday ((sorry coda))[https://codarobo.online/].
+Looove [this ep](https://b-trx.bandcamp.com/album/garage-hearts), got it suuuper late honestly. Last bandcamp friday [(sorry coda)](https://codarobo.online/).
 Anyways been listening to it a lot.
 
 ## avoset has a newgrounds now
