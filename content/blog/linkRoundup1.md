@@ -60,7 +60,7 @@ on a related note [this game is also fun](https://userinyerface.com/)
 ## is that a demo in your pocket
 [super catchy gameboy demo](https://hh.gbdev.io/game/is-that-a-demo-in-your-pocket) found this while looking for gb studio stuff! :3
 
-# regenbogenkarte 
+## regenbogenkarte 
 probably only useful if you are german
 [it's a map of queer meeting places](https://karte.queer-lexikon.net/)
 
