@@ -31,7 +31,7 @@ Especially if I'm friends with them :P
 I been taking to it more recently which is cool and it has a [cool blog](https://www.5snb.club/)!
 
 ## sapphic crystal love
-[starmoon is cool and this is my favorite album](https://starmoon.bandcamp.com/album/sapphic-crystal-love)
+[starmoon is cool and this is my favorite album by her](https://starmoon.bandcamp.com/album/sapphic-crystal-love)
 
 ## subset 23
 I've found luna sc randomly recommended on YouTube at some point and have been really enjoying the music (and cool modular machine aesthetics from the videos) since then!
