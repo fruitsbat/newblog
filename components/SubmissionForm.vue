@@ -61,7 +61,7 @@ const submissionKindPath: Record<submissionKind, string> = {
 const props = defineProps({
   slug: { type: String, required: false },
   kind: { type: Object as PropType<submissionKind>, required: true },
-  replyTo: { type: String, required: false }
+  reply: { type: Object as PropType<string | undefined>, required: false }
 })
 
 const comment = ref({
@@ -81,6 +81,9 @@ function submitComment() {
 
   if (props.slug) {
     formData.append('options[slug]', props.slug)
+  }
+  if (props.reply) {
+    formData.append('fields[reply]', props.reply)
   }
   formData.append('fields[name]', name)
   formData.append('fields[website]', comment.value.website)

@@ -3,8 +3,9 @@
     <SubmissionDisplay
       v-for="submission in content"
       :submission="submission"
+      kind="guestbook"
     ></SubmissionDisplay>
-    <SubmissionForm kind="guestbook" , slug="" />
+    <SubmissionForm kind="guestbook" />
     <FloatingHomeButton />
   </div>
 </template>

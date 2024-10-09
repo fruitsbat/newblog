@@ -21,6 +21,7 @@
           v-for="item in comments"
           :submission="item"
           :path="slug"
+          kind="comment"
         ></SubmissionDisplay>
       </div>
     </section>
