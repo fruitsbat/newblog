@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col gap-8 w-full items-center">
+  <div class="flex flex-col gap-8 p-6 w-full items-center">
     <h1 class="font-black text-7xl text-center p-name">guestbook</h1>
     <SubmissionForm kind="guestbook" />
 
