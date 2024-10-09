@@ -18,6 +18,7 @@
         >discord</NuxtLink
       >.
       emailing <a class="link" href="mailto:zoe@kittycat.homes">zoe@kittycat.homes</a> works too.
+      or you can sign <NuxtLink class="link" to="/guestbook">my guestbook</NuxtLink>!
     </p>
 
   </div>

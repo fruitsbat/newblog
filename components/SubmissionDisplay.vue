@@ -1,5 +1,5 @@
 <template>
-  <article class="rounded-lg bg-base-200 p-6">
+  <article class="border-l-2 border-base-content pl-4 flex flex-col gap-2">
     <a class="link" v-if="submission.website" :href="submission.website"
       ><h2 class="flex flex-row flex-wrap items-center gap-2 text-xl font-black">
         <span>{{ submission.name }}</span>
@@ -23,7 +23,7 @@
       <summary class="btn">reply</summary>
       <SubmissionForm :reply="submission._id" :kind="kind" />
     </details>
-    <div class="border-l-2">
+    <div>
       <SubmissionDisplay v-for="reply in replies" :submission="reply" :kind="kind" :slug="slug" />
     </div>
   </article>
