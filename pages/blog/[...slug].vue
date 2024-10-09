@@ -10,7 +10,7 @@
       </div>
       <ContentRenderer class="max-w-2xl e-content" :value="data" />
     </article>
-    <CommentForm :slug="slug"></CommentForm>
+    <SubmissionForm :slug="slug" kind="comment"></SubmissionForm>
     <div class="flex flex-col w-full gap-4 max-w-2xl">
       <CommentDisplay
         v-for="item in comments"

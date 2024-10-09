@@ -22,7 +22,7 @@
     <button type="submit" :class="`btn flex w-full gap-2 ${loading ? 'btn-disabled' : ''}`">
       <div v-if="loading" class="loading loading-ring"></div>
       <EnvelopeIcon v-else class="h-6 w-6" />
-      <span> comment! </span>
+      <span> {{ submissionKindVerb[kind] }} </span>
     </button>
     <div
       v-if="showSuccessDisclaimer"
@@ -46,9 +46,22 @@
 <script setup lang="ts">
 import axios from 'axios'
 import { EnvelopeIcon, CheckBadgeIcon, XCircleIcon } from '@heroicons/vue/24/solid'
+import type { PropType } from 'vue'
+
+type submissionKind = 'comment' | 'guestbook'
+const submissionKindVerb: Record<submissionKind, string> = {
+  comment: 'comment!',
+  guestbook: 'sign!'
+}
+const submissionKindPath: Record<submissionKind, string> = {
+  comment: 'comment',
+  guestbook: 'guestbook'
+}
 
 const props = defineProps({
-  slug: { type: String, required: true }
+  slug: { type: String, required: false },
+  kind: { type: Object as PropType<submissionKind>, required: true },
+  replyTo: { type: String, required: false }
 })
 
 const comment = ref({
@@ -66,16 +79,20 @@ function submitComment() {
   const formData = new URLSearchParams()
   const name = comment.value.name || 'anonymous user'
 
-  formData.append('options[slug]', props.slug)
+  if (props.slug) {
+    formData.append('options[slug]', props.slug)
+  }
   formData.append('fields[name]', name)
   formData.append('fields[website]', comment.value.website)
   formData.append('fields[body]', comment.value.body)
 
   axios
-    .post('https://comments.kittycat.homes/v2/entry/fruitsbat/newblog/main/comments', formData)
-    .then((response) => {
-      console.log('Comment submitted successfully:', response)
-      // Optionally reset the comment state after submission
+    .post(
+      `https://comments.kittycat.homes/v2/entry/fruitsbat/newblog/main/${submissionKindPath[props.kind]}`,
+      formData
+    )
+    .then(() => {
+      // reset state after submission
       comment.value.website = ''
       comment.value.name = ''
       comment.value.body = ''
