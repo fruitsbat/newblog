@@ -30,7 +30,7 @@
     >
       <CheckBadgeIcon class="h-6 w-6" />
       <span class="break-words"
-        >your comment has been sent! it will be manually reviewed before it shows up.</span
+        >your submission has been sent! it will be manually reviewed before it shows up.</span
       >
     </div>
     <div
