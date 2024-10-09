@@ -54,7 +54,7 @@ const submissionKindVerb: Record<submissionKind, string> = {
   guestbook: 'sign!'
 }
 const submissionKindPath: Record<submissionKind, string> = {
-  comment: 'comment',
+  comment: 'comments',
   guestbook: 'guestbook'
 }
 
