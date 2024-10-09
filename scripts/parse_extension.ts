@@ -8,7 +8,7 @@ export interface ParsedContentExtension extends ParsedContent {
   description: string | undefined;
 }
 
-export interface CommentExtension extends ParsedContent {
+export interface SubmissionExtension extends ParsedContent {
   name: string;
   website: string | undefined;
   timestamp: number;

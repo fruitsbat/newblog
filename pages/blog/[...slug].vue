@@ -1,23 +1,29 @@
 <template>
   <div class="flex flex-col w-full justify-center items-center gap-6">
-    <article class="h-entry">
-      <div class="pb-6">
-        <h1 class="font-black text-7xl text-center p-name">{{ data.title }}</h1>
-        <span class="md:pl-12 indent-4 text-lg text-center">
-          last updated:
-          <time class="font-bold dt-updated">{{ date() }}</time>
-        </span>
+    <section>
+      <article class="h-entry">
+        <div class="pb-6">
+          <h1 class="font-black text-7xl text-center p-name">
+            {{ data.title }}
+          </h1>
+          <span class="md:pl-12 indent-4 text-lg text-center">
+            last updated:
+            <time class="font-bold dt-updated">{{ date() }}</time>
+          </span>
+        </div>
+        <ContentRenderer class="max-w-2xl e-content" :value="data" />
+      </article>
+    </section>
+    <section class="flex flex-col gap-8">
+      <SubmissionForm :slug="slug" kind="comment"></SubmissionForm>
+      <div class="flex flex-col w-full gap-4 max-w-2xl">
+        <SubmissionDisplay
+          v-for="item in comments"
+          :submission="item"
+          :path="slug"
+        ></SubmissionDisplay>
       </div>
-      <ContentRenderer class="max-w-2xl e-content" :value="data" />
-    </article>
-    <SubmissionForm :slug="slug" kind="comment"></SubmissionForm>
-    <div class="flex flex-col w-full gap-4 max-w-2xl">
-      <CommentDisplay
-        v-for="item in comments"
-        :comment="item"
-        :path="slug"
-      ></CommentDisplay>
-    </div>
+    </section>
     <FloatingHomeButton />
   </div>
 </template>
@@ -25,7 +31,7 @@
 <script setup lang="ts">
 import {
   type ParsedContentExtension,
-  type CommentExtension,
+  type SubmissionExtension,
 } from "~/scripts/parse_extension";
 
 const data = await queryContent<ParsedContentExtension>(
@@ -48,7 +54,9 @@ const date = (): string => {
   });
 };
 
-const comments = await queryContent<CommentExtension>(`/comments/${slug.value}`)
+const comments = await queryContent<SubmissionExtension>(
+  `/comments/${slug.value}`
+)
   .sort({ timestamp: -1 })
   .where({ reply: { $exists: false } })
   .find();
