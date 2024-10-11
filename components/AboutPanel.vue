@@ -21,6 +21,10 @@
               >my girlfriend lotte</NuxtLink
             >!
           </p>
+          <p>
+            Here's a button if you like this website and want to link to it!
+            <img style="image-rendering: pixelated;" src="/button.gif" class="h-[62px] w-[176px] hover:scale-150" />
+          </p>
         </div>
         <ClientOnly>
           <LastFM />
@@ -29,7 +33,10 @@
         <SocialLinks />
       </div>
       <div class="grid @3xl:col-span-3">
-        <ContactDetails class="text-primary-content @3xl:col-span-2" />
+        <div>
+          <BlogRoll />
+          <ContactDetails class="text-primary-content @3xl:col-span-2" />
+        </div>
         <div class="row-span-3 flex h-full flex-col items-center justify-center @3xl:col-span-2">
           <img
             title="physical form!"
