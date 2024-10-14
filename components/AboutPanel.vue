@@ -21,13 +21,19 @@
               >my girlfriend lotte</NuxtLink
             >!
           </p>
-          <p>
-            Here's a button if you like this website and want to link to it!
-          <div class="flex flex-wrap flex-row gap-4">
-            <img style="image-rendering: pixelated;" src="/button.gif" class="min-h-[62px] min-w-[176px] w-full hover:scale-150" />
-            <img style="image-rendering: pixelated;" src='/button.png' class="min-h-[62px] min-w-[176px] w-full hover:scale-150" />
+          <p>Here's a button if you like this website and want to link to it!</p>
+          <div class="flex flex-row flex-wrap gap-4">
+            <img
+              style="image-rendering: pixelated"
+              src="/button.gif"
+              class="min-h-[62px] w-full min-w-[176px] hover:scale-150"
+            />
+            <img
+              style="image-rendering: pixelated"
+              src="/button.png"
+              class="min-h-[62px] w-full min-w-[176px] hover:scale-150"
+            />
           </div>
-          </p>
         </div>
         <ClientOnly>
           <LastFM />
