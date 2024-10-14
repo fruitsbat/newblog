@@ -23,7 +23,10 @@
           </p>
           <p>
             Here's a button if you like this website and want to link to it!
-            <img style="image-rendering: pixelated;" src="/button.gif" class="h-[62px] w-[176px] hover:scale-150" />
+          <div class="flex flex-wrap flex-row gap-4">
+            <img style="image-rendering: pixelated;" src="/button.gif" class="min-h-[62px] min-w-[176px] w-full hover:scale-150" />
+            <img style="image-rendering: pixelated;" src='/button.png' class="min-h-[62px] min-w-[176px] w-full hover:scale-150" />
+          </div>
           </p>
         </div>
         <ClientOnly>
