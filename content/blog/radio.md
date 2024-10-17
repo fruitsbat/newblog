@@ -1,7 +1,7 @@
 ---
 title: setting up an internet radio
 tags: ["thought", "web", "music"]
-timestamp: 1726414965
+timestamp: 1729147031
 ---
 
 Recently i set up an internet radio station! I've already written a mission statement on that website, so these are some more personal thoughts on it.
