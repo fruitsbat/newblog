@@ -16,12 +16,6 @@
           </ul>
           <p>ideally a combination of these.</p>
           <p>
-            i also love
-            <NuxtLink class="text-neutral-content" to="https://tiger.kittycat.homes"
-              >my girlfriend lotte</NuxtLink
-            >!
-          </p>
-          <p>
             Here's a button if you like this website and want to link to it!
             <img style="image-rendering: pixelated;" src="/button.gif" class="h-[62px] w-[176px] hover:scale-150" />
           </p>
