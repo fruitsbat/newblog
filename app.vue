@@ -10,7 +10,7 @@
         <NuxtPage />
       </NuxtLayout>
       <footer class="text-center text-sm p-2">
-        kittycats rule teh world forevah © 2024
+        fruitbat © 2024
       </footer>
     </div>
   </div>
