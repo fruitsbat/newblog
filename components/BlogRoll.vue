@@ -15,7 +15,6 @@
 
 <script setup lang="ts">
 const buttons: Array<{ linksTo: string; imgUrl: string }> = [
-  { linksTo: 'https://tiger.kittycat.homes', imgUrl: 'tiger.gif' },
   { linksTo: 'https://meltknuckles.net/links', imgUrl: 'meltknuckles.gif' },
   { linksTo: 'https://erysdren.me', imgUrl: 'erysdren.png' },
   { linksTo: 'https://le.alphamethyl.barr0w.net/~elysia/', imgUrl: "elysia.png"}
