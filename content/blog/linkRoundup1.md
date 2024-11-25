@@ -24,9 +24,6 @@ I like seeing more people join newgrounds!!
 Especially if I'm friends with them :P
 [Also new internet record shop out soon!](https://youtu.be/yFqdU55MxJQ?si=VMz9G8IE5txYgWUJ)
 
-## my wifes website!
-[yeah sorry but it's really cool ok let me be a wife guy (gal?) for a bit](https://tiger.kittycat.homes/)
-
 ## 522s website
 I been taking to it more recently which is cool and it has a [cool blog](https://www.5snb.club/)!
 
