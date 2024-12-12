@@ -12,7 +12,6 @@
         <br />
         here you'll find games, music and whatever else i'm obsessed with today
       </p>
-      <ThemeSwitcher />
     </div>
   </div>
 </template>

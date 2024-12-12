@@ -1,7 +1,7 @@
 <template>
   <div
     class="box-border break-words transition-all min-h-dvh bg-gradient-to-tr from-primary to-secondary text-neutral"
-    :data-theme="active"
+    :data-theme="visibleTheme"
   >
     <div
       class="flex flex-col items-stretch min-h-dvh justify-center w-full bg-base-100 bg-opacity-100 overflow-scroll overflow-y-scroll"
@@ -10,6 +10,7 @@
         <NuxtPage />
       </NuxtLayout>
       <footer class="text-center text-sm p-2">
+        <ThemeSwitcher class="w-full" />
         fruitbat © 2024 - {{ new Date(Date.now()).getFullYear() }}
       </footer>
     </div>
@@ -20,8 +21,13 @@
 import { useThemeStore } from "./stores/theme";
 const store = useThemeStore();
 const { active } = storeToRefs(store);
+const visibleTheme = ref("");
 watch(active, () => {
-  console.log(`theme: ${active.value}`);
+  visibleTheme.value = active.value;
+});
+
+onMounted(() => {
+  visibleTheme.value = active.value;
 });
 </script>
 

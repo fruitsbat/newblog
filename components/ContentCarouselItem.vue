@@ -2,7 +2,6 @@
   <div
     :ref="`${props.content._id}`"
     class="carousel-item w-full max-w-xs rounded-xl bg-gradient-to-br from-secondary to-accent text-neutral"
-    v-motion-slide-visible-once-right
   >
     <div class="flex h-full w-full flex-col justify-between rounded-xl bg-base-100 bg-opacity-95">
       <div>
