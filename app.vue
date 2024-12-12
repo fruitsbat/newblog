@@ -1,16 +1,16 @@
 <template>
   <div
-    class="box-border break-words transition-all min-h-screen bg-gradient-to-tr from-primary to-secondary text-neutral"
+    class="box-border break-words transition-all min-h-dvh bg-gradient-to-tr from-primary to-secondary text-neutral"
     :data-theme="active"
   >
     <div
-      class="min-h-screen flex flex-col items-stretch justify-center w-full bg-base-100 bg-opacity-100"
+      class="flex flex-col items-stretch min-h-dvh justify-center w-full bg-base-100 bg-opacity-100 overflow-scroll overflow-y-scroll"
     >
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
       <footer class="text-center text-sm p-2">
-        fruitbat © 2024
+        fruitbat © 2024 - {{ new Date(Date.now()).getFullYear() }}
       </footer>
     </div>
   </div>

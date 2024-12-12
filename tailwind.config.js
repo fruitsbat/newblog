@@ -10,24 +10,15 @@ export default {
   ],
   theme: {
     fontFamily: {
-      rammetto: ["RammettoOne"],
-      macondo: ["Macondo"],
-      sans: ["Atkinson"],
-      bold: ["Atkinson"],
-      italic: ["Atkinson"],
-      syncopate: ["Syncopate"],
-      pattaya: ["Pattaya"],
-      gasoekone: ["GasoekOne"],
-      glitch: ["Glitch"],
-      flexi: ["Flexi"],
-      ka1: ["ka1"],
-      euclid: ["Euclid"],
-      glockenspiel: ["glockenspiel"],
+      sans: ["Fira Sans"],
     },
     extend: {
       backgroundImage: {
         "dot-texture": "url('/image/texture.webp')",
       },
+      texticonMask: {
+        "mask-image": "url('/image/texticon.webp')"
+      }
     },
   },
   plugins: [

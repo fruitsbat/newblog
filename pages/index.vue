@@ -1,15 +1,12 @@
 <template>
-  <div>
-    <HomeHeading class="min-h-screen" />
-    <div class="grid xl:grid-cols-5 gap-4 p-8">
-      <ContentNavigation class="xl:col-span-3 drop-shadow-md" />
-      <AboutPanel class="xl:col-span-2 drop-shadow-md" />
-    </div>
+  <div class="h-full flex flex-col gap-6 p-6">
+    <IndexHero />
+    <LinkBar />
+    <ContentCarousel />
   </div>
 </template>
 
 <script setup lang="ts">
-import ContentNavigation from "~/components/ContentNavigation.vue";
 const title = "fruitbat's blog" as const;
 const description = `Hi! I'm zoe! 
 Right now i study software engineering at university, 

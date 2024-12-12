@@ -11,5 +11,4 @@ links:
 ---
 
 A virtual pet game where you take care of a talkative plant.
-I made this with my girlfriend.
 <!--more-->

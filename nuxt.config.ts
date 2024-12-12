@@ -6,6 +6,7 @@ export default defineNuxtConfig({
   modules: [
     "@pinia/nuxt",
     "@vueuse/nuxt",
+    "@vueuse/motion/nuxt",
     "@pinia-plugin-persistedstate/nuxt",
     "@nuxt/content",
   ],

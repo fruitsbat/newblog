@@ -4,7 +4,7 @@
             <div class="flex-grow flex-col flex items-end justify-center p-4 gap-2">
                 <div class="flex flex-row gap-2 items-center justify-end">
                     <Transition name="bounce">
-                        <div v-if="$state.active == themeName" class="flex gap-2 label items-center text-sm rounded-xl">
+                        <div v-if="$state.active == themeName" class="flex gap-2 label items-center text-sm rounded-xl relative" v-motion-pop-visible-once>
                             <CheckCircleIcon class="h-6 w-6" />
                             <span>active</span>
                         </div>
@@ -36,13 +36,13 @@ const { $state } = useThemeStore()
 </script>
 
 <style>
-.bounce-enter-active {
+/* .bounce-enter-active {
     animation: bounce-in 0.24s;
 }
 
 .bounce-leave-active {
     animation: bounce-out 0.12s;
-}
+} */
 
 @keyframes bounce-in {
     0% {

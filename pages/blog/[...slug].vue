@@ -14,17 +14,6 @@
         <ContentRenderer class="max-w-2xl e-content" :value="data" />
       </article>
     </section>
-    <section class="flex flex-col gap-8">
-      <SubmissionForm :slug="slug" kind="comment"></SubmissionForm>
-      <div class="flex flex-col w-full gap-4 max-w-2xl">
-        <SubmissionDisplay
-          v-for="item in comments"
-          :submission="item"
-          :path="slug"
-          kind="comment"
-        ></SubmissionDisplay>
-      </div>
-    </section>
     <FloatingHomeButton />
   </div>
 </template>
