@@ -3,6 +3,7 @@
     <IndexHero />
     <LinkBar />
     <ContentCarousel />
+    <ThemeSwitcher class="w-full" />
   </div>
 </template>
 

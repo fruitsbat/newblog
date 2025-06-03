@@ -10,7 +10,6 @@
         <NuxtPage />
       </NuxtLayout>
       <footer class="text-center text-sm p-2 gap-4 flex flex-col">
-        <ThemeSwitcher class="w-full" />
         <span class="p-2">
           fruitbat © 2024 - {{ new Date(Date.now()).getFullYear() }}
         </span>
