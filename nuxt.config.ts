@@ -62,6 +62,10 @@ export default defineNuxtConfig({
           type: "image/x-icon",
           href: "/favicon.svg",
         },
+        {
+          rel: "me",
+          href: "https://social.treehouse.systems/@bat",
+        },
       ],
     },
   },
