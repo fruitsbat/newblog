@@ -7,7 +7,7 @@
       <div>
         <NuxtLink class="w-full" v-if="content.image" :external="true" :to="mainLink()">
           <img
-            class="aspect-square w-full rounded-t-xl"
+            class="aspect-square object-cover w-full rounded-t-xl "
             :src="`/image/${content.image.url}`"
             :alt="content.image.alt"
           />

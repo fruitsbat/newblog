@@ -4,7 +4,7 @@
     class="flex flex-col w-full justify-center items-center gap-6"
   >
     <section>
-      <article class="h-entry">
+      <article class="h-entry flex flex-col items-center">
         <div class="p-6">
           <h1 class="font-black text-7xl text-center p-name">
             {{ data.title }}
@@ -14,9 +14,7 @@
             <time class="font-bold dt-updated">{{ date() }}</time>
           </span>
         </div>
-        <div class="p-6">
-          <ContentRenderer class="max-w-2xl e-content" :value="data" />
-        </div>
+        <ContentRenderer class="max-w-2xl e-content p-6" :value="data" />
       </article>
     </section>
     <FloatingHomeButton />
