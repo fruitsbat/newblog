@@ -1,10 +1,17 @@
 import { Feed } from "feed";
-import type { ParsedContentExtension } from "./parse_extension";
 import Showdown from "showdown";
 import { readFile } from "fs/promises";
 import { join } from "path";
+import type { BlogCollectionItem, LinksCollectionItem } from "@nuxt/content";
+import type { H3Event, EventHandlerRequest } from "h3";
 
 const BASE_URL = "https://zoe.kittycat.homes";
+
+const isLinksCollection = (
+  item: BlogCollectionItem | LinksCollectionItem
+): item is LinksCollectionItem => {
+  return "links" in item && item.links !== undefined;
+};
 
 async function markdownFromFile(fname: string): Promise<string> {
   const converter = new Showdown.Converter();
@@ -20,7 +27,9 @@ async function markdownFromFile(fname: string): Promise<string> {
   return converter.makeHtml(contentWithoutFrontmatter);
 }
 
-export async function getFeed(): Promise<Feed> {
+export async function getFeed(
+  content: Array<LinksCollectionItem | BlogCollectionItem>
+): Promise<Feed> {
   const feed = new Feed({
     title: "fruitbat's website",
     id: BASE_URL,
@@ -31,28 +40,23 @@ export async function getFeed(): Promise<Feed> {
     favicon: BASE_URL + "/favicon.svg",
     language: "en",
   });
-  const content: Array<ParsedContentExtension> = (
-    (await $fetch("/api/_content/query")) as Array<ParsedContentExtension>
-  )
-    .filter((item) => {
-      return item.tags;
-    })
-    .sort((a, b) => {
-      return b.timestamp - a.timestamp;
-    });
+
+  content = content.sort(
+    (a, b) => b.timestamp - a.timestamp
+  );
   for (const contentItem of content) {
     feed.addItem({
       title: contentItem.title ?? "no title",
       date: new Date(contentItem.timestamp * 1000),
       link: (() => {
         // check if content item is not undefined or empty
-        if (contentItem.links !== undefined && contentItem.links.length > 0) {
+        if (isLinksCollection(contentItem)) {
           return contentItem.links[0].url;
         }
-        return BASE_URL + contentItem._path!;
+        return BASE_URL + contentItem.path;
       })(),
-      image: BASE_URL + "/image/" + contentItem.imageURL,
-      description: await markdownFromFile(contentItem._file!),
+      image: BASE_URL + "/image/" + contentItem.image?.url,
+      description: contentItem.description,
       category: contentItem.tags.map((item) => {
         return { domain: "zoe.kittycat.homes", term: item, name: item };
       }),
@@ -63,7 +67,7 @@ export async function getFeed(): Promise<Feed> {
     if (doc.image != undefined) {
       content =
         content +
-        `<img src='https://zoe.kittycat.homes${doc.image}' alt='${doc.image_description}' />`;
+        `<img src='https://zoe.kittycat.homes${doc.image}' alt='${doc.image.alt}' />`;
     }
   }
   return feed;

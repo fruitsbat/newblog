@@ -1,16 +1,9 @@
-import type { ParsedContent } from "@nuxt/content";
+import type { CollectionItemBase } from "@nuxt/content";
 
-export interface ParsedContentExtension extends ParsedContent {
+export interface ParsedContentExtension extends CollectionItemBase {
   image?: {url: string, alt: string}
   tags: Array<string>;
   timestamp: number;
-  links: Array<{ title: string; url: string }> | undefined;
+  links?: Array<{ title: string; url: string }>;
   description: string | undefined;
-}
-
-export interface SubmissionExtension extends ParsedContent {
-  name: string;
-  website: string | undefined;
-  timestamp: number;
-  reply: string | undefined;
 }

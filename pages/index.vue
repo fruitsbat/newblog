@@ -23,7 +23,7 @@ useSeoMeta({
   ogUrl: `https://zoe.kittycat.homes/`,
   ogSiteName: "fruitbat's blog",
   ogType: "profile",
-  profileGender: "she/they",
+  profileGender: "they",
   ogImage: icon,
   ogImageAlt: iconAlt,
   twitterTitle: title,

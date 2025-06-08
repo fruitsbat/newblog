@@ -10,6 +10,7 @@
 const links: Array<{ title: string; url: string }> = [
   { title: 'bandcamp', url: 'https://zoebat.bandcamp.com/' },
   { title: 'bsky', url: 'https://bsky.app/profile/bat.kittycat.homes' },
+  { title: 'fedi', url: 'https://social.treehouse.systems/@bat' },
   { title: 'newgrounds', url: 'https://fruitsbat.newgrounds.com/' },
   { title: 'last.fm', url: 'https://www.last.fm/user/zoebat' },
   { title: 'twitch', url: 'https://www.twitch.tv/zoe_bat' },

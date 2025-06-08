@@ -1,6 +1,6 @@
 <template>
   <div
-    :ref="`${props.content._id}`"
+    :ref="`${props.content.id}`"
     class="carousel-item w-full max-w-xs rounded-xl bg-gradient-to-br from-secondary to-accent text-neutral"
   >
     <div class="flex h-full w-full flex-col justify-between rounded-xl bg-base-100 bg-opacity-95">
@@ -20,7 +20,7 @@
         <span class="text-sm font-semibold">last updated: {{ date() }}</span>
         <span class="">{{ content.description }}</span>
       </div>
-      <div v-if="content.links" class="flex flex-row flex-wrap justify-evenly p-4">
+      <div v-if="isLinksCollection(content)" class="flex flex-row flex-wrap justify-evenly p-4">
         <NuxtLink :external="true" v-for="link in content.links" class="link flex-grow text-center">
           {{ link.title }}
         </NuxtLink>
@@ -33,25 +33,27 @@
 </template>
 
 <script setup lang="ts">
-import { type ParsedContentExtension } from '../scripts/parse_extension'
+import type { BlogCollectionItem, LinksCollectionItem } from '@nuxt/content'
 import { type PropType } from 'vue'
 
 const props = defineProps({
   content: {
-    type: Object as PropType<ParsedContentExtension>,
+    type: Object as PropType<BlogCollectionItem | LinksCollectionItem>,
     required: true
   }
 })
 
-const hasLinksField = () => {
-  return props.content.links !== undefined && props.content.links.length > 0
+const isLinksCollection = (
+  item: BlogCollectionItem | LinksCollectionItem
+): item is LinksCollectionItem => {
+  return 'links' in item && item.links !== undefined
 }
 
 const mainLink = (): string => {
-  if (hasLinksField()) {
-    return props.content.links![0].url
+  if (isLinksCollection(props.content)) {
+    return props.content.links[0].url
   }
-  return props.content._path!
+  return props.content.path
 }
 
 const date = (): string => {

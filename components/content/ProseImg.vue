@@ -30,8 +30,8 @@ const props = defineProps({
   }
 })
 
-const baseURL = dev ? '' : 'https://zoe.kittycat.homes'
-const baseRegex = new RegExp("https://zoe.kittycat.homes")
+const baseURL = dev ? '' : 'https://bat.kittycat.homes'
+const baseRegex = new RegExp("https://bat.kittycat.homes")
 const refinedSrc = computed(() => {
   const withAppropriateBaseUrl = props.src.replace(baseRegex, baseURL)
   return withAppropriateBaseUrl;
