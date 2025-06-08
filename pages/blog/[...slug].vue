@@ -14,7 +14,9 @@
             <time class="font-bold dt-updated">{{ date() }}</time>
           </span>
         </div>
-        <ContentRenderer class="max-w-2xl e-content" :value="data" />
+        <div class="p-6">
+          <ContentRenderer class="max-w-2xl e-content" :value="data" />
+        </div>
       </article>
     </section>
     <FloatingHomeButton />
