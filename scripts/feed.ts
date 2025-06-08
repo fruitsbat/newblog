@@ -5,7 +5,7 @@ import { join } from "path";
 import type { BlogCollectionItem, LinksCollectionItem } from "@nuxt/content";
 import type { H3Event, EventHandlerRequest } from "h3";
 
-const BASE_URL = "https://zoe.kittycat.homes";
+const BASE_URL = "https://bat.kittycat.homes";
 
 const isLinksCollection = (
   item: BlogCollectionItem | LinksCollectionItem
@@ -58,7 +58,7 @@ export async function getFeed(
       image: BASE_URL + "/image/" + contentItem.image?.url,
       description: contentItem.description,
       category: contentItem.tags.map((item) => {
-        return { domain: "zoe.kittycat.homes", term: item, name: item };
+        return { domain: "bat.kittycat.homes", term: item, name: item };
       }),
     });
   }
@@ -67,7 +67,7 @@ export async function getFeed(
     if (doc.image != undefined) {
       content =
         content +
-        `<img src='https://zoe.kittycat.homes${doc.image}' alt='${doc.image.alt}' />`;
+        `<img src='https://bat.kittycat.homes${doc.image}' alt='${doc.image.alt}' />`;
     }
   }
   return feed;

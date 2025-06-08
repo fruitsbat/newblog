@@ -36,7 +36,7 @@ const date = (): string => {
 const imageData = computed(() => {
   return data!.image
     ? {
-        url: `https://zoe.kittycat.homes/image/${data!.image.url}`,
+        url: `https://bat.kittycat.homes/image/${data!.image.url}`,
         alt: data!.image.alt,
       }
     : { url: undefined, alt: undefined };

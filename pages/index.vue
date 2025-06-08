@@ -13,14 +13,14 @@ const description = `Hi! I'm zoe!
 Right now i study software engineering at university, 
 but spend a lot of my free time making music and generally being interested in way too many things!
 Welcome to my blog :3`;
-const icon = "https://zoe.kittycat.homes/favicon.svg";
+const icon = "https://bat.kittycat.homes/favicon.svg";
 const iconAlt = "A bat with a funny nose! But its not a fruitbat";
 useSeoMeta({
   title: title,
   ogTitle: title,
   description: description,
   ogDescription: description,
-  ogUrl: `https://zoe.kittycat.homes/`,
+  ogUrl: `https://bat.kittycat.homes/`,
   ogSiteName: "fruitbat's blog",
   ogType: "profile",
   profileGender: "they",
