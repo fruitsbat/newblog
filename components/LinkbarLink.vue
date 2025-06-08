@@ -6,7 +6,6 @@
     :to="link.url"
     :style="{ borderRadius: borderRadius }"
     :class="`external-link overflow-visible link flex-grow p-4 text-center text-lg font-semibold odd:bg-primary even:bg-neutral`"
-    v-motion-pop-visible-once
     >{{ link.title }}</NuxtLink
   >
 </template>

@@ -39,7 +39,6 @@
   },
   "dependencies": {
     "@fortawesome/vue-fontawesome": "^3.0.8",
-    "@vueuse/motion": "^2.2.6",
     "sitemap": "^8.0.0"
   }
 }

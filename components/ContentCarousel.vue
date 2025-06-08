@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full rounded-3xl bg-neutral" v-motion-slide-visible-once-bottom>
+  <div class="w-full rounded-3xl bg-neutral">
     <div class="flex flex-col rounded-2xl bg-neutral text-neutral-content">
       <TransitionGroup
         class="carousel carousel-center flex min-h-12 w-full gap-2 overflow-x-scroll p-4"
