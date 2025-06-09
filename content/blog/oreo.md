@@ -3,7 +3,7 @@ title: oreo lens is awesome
 image:
     url: "oreo/gooseAccident.webp"
     alt: "picture of the ever given lmao"
-tags: ["photography", "oreo lens", "sony 35mm f/1.8 oss"]
+tags: ["photography", "oreo lens", "Sony 35mm f/1.8 oss"]
 timestamp: 1749385931
 ---
 
