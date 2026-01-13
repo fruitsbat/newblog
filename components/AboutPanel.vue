@@ -4,9 +4,10 @@
       <div class="grid gap-4 @3xl:col-span-2">
         <div class="prose w-full min-w-full rounded-3xl bg-neutral p-8 text-neutral-content">
           <h2 class="font-euclid text-5xl text-neutral-content">about</h2>
-          <p>hi! i'm zoe. welcome to my website.</p>
+          <p>hi! i'm laika. welcome to my website.</p>
           <p>
-            i'm a 23 year old university student from hamburg. you may believe it or not but there
+            i dont know shit about fuck but
+            you may believe it or not but there
             are some things i enjoy doing. these include but are not limited to:
           </p>
           <ul>
