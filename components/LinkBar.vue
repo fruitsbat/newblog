@@ -16,6 +16,5 @@ const links: Array<{ title: string; url: string }> = [
   { title: 'last.fm', url: 'https://www.last.fm/user/zoebat' },
   { title: 'twitch', url: 'https://www.twitch.tv/zoe_bat' },
   { title: 'rss feed', url: '/index.xml' },
-  { title: 'girlfriend page :3', url: 'https://voxelcreatesstuff.github.io/home/'}
 ]
 </script>
