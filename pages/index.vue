@@ -9,7 +9,7 @@
 
 <script setup lang="ts">
 const title = "fruitbat's blog" as const;
-const description = `Hi! I'm zoe! 
+const description = `Hi! I'm laika! 
 Right now i study software engineering at university, 
 but spend a lot of my free time making music and generally being interested in way too many things!
 Welcome to my blog :3`;
