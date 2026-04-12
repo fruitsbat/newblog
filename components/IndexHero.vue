@@ -8,7 +8,6 @@
     <div class="flex h-full flex-col items-center gap-6 justify-center sm:col-span-2">
       <h1 class="text-4xl font-black">hi! i'm laika</h1>
       <p class="text-center w-full">
-        i'm a software engineering student from hamburg and this is my blog!
         <br />
         here you'll find games, music and whatever else i'm obsessed with today
       </p>
